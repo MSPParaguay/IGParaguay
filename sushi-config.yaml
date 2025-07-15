@@ -1,0 +1,41 @@
+# ╭─────────────────────────────────ImplementationGuide-fish.json──────────────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
+# │  supported properties, see:                                                                    │
+# │  https://fshschool.org/docs/sushi/configuration/#full-configuration                            │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: hl7.fhir.py.CorePY
+canonical: https://www.gob.py/minsa/fhir
+version: 0.1
+name: CorePY-ImplementationGuide
+
+title: Interoperabilidad de Historia Clínica - PARAGUAY
+status: draft
+publisher: 
+  name: MSP PARAGUAY
+  url: https://www.gob.py/minsa
+description: Ministerio de Salud , PARAGUAY - Interoperabilidad de Historia Clínica IHC - 
+jurisdiction: urn:iso:std:iso:3166#PY
+license: CC0-1.0
+fhirVersion: 4.0.1
+parameters:
+  apply-publisher: true
+  apply-contact: true
+  show-inherited-invariants: false
+copyrightYear: 2023+
+releaseLabel: ci-build
+
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │  To use a provided input/includes/menu.xml file, delete the "menu" property below..             │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+menu:
+  Inicio: index.html      
+  Perfiles:
+    "Paciente": StructureDefinition-PacientePy.html
+  Resumen: 
+    "Versiones": versiones.html
+    "Resumen": artifacts.html
+    "Descargas": descarga.html
+
+
+
+   
