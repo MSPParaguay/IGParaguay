@@ -1,5 +1,3 @@
-Alias: $RelatedPerson-mother = http://hl7.org/fhir/us/vr-common-library/StructureDefinition/RelatedPerson-mother
-
 Profile: PacientePy
 Parent:  Patient
 Title: "Paciente Paraguay"
@@ -10,24 +8,21 @@ Description: "En esta sección se presentará un resumen de la información rela
 
 //---------Nombres y Apellidos
 * name 1.. MS
+* name ^short = "Nombres y Apellidos del Paciente."
+* name ^definition = "Nombre patronímico que aparece en el documento de identidad."
+
+* name.family ^short = "Apellidos del usuario de salud / paciente."
 * name.family and name.given MS
 * name.family 1..
 
-* name.family ^short = "Apellidos del usuario de salud / paciente."
-
-//* name.family.extension contains $humanname-mothers-family named SegundoApellido 0..      
   
-
-* name.given 1..
 * name.given ^short = "Nombres del paciente."
+* name.given 1..
 
-* name ^short = "Nombres y Apellidos del Paciente."
-* name ^definition = "Nombre patronímico que aparece en el documento de identidad."
 
 
 //---------------Sexo    
 * gender ^short = "Sexo de nacimiento: male | female | other | unknown (requerido)"
-
 * gender 1..1 MS
 
 
@@ -38,8 +33,7 @@ Description: "En esta sección se presentará un resumen de la información rela
 * birthDate 1..1
 
 
-
-/*------------Identificadores
+/*------------Identificadores---------------------*/
 * identifier ^short = "Identificación del paciente."
 * identifier ^definition = "Elemento de dato que contiene el nombre y número de identificación de una determinada persona 
 para efectos de identidad e individualización."
@@ -54,18 +48,30 @@ para efectos de identidad e individualización."
 * identifier.type.coding 1.. MS
 * identifier.type.coding.code 1.. MS
 
-* identifier.type.extension ^short = "Extension para representar pais del documento."
-* identifier.type.extension ^definition = "Se usa esta extensión para agregarle al tipo de documento el país de origen de este" 
-* identifier.type.extension contains Pais named pais_emisor 1..1  
+
+
+
+//--------------Ejemplo 3 - paciente resumido --------------------------------------------------//
+Instance: Paciente
+InstanceOf: PacientePy
+Description: "Ejemplo de Paciente."
+
+Usage: #example
+
+/** identifier[0].type.coding.system = $cs_identper //* identifier.type.coding.system = $cs_identper
+* identifier[0].type.coding.code = #CC //* identifier.type.coding.code = #CC
+* identifier[0].type.coding.display = "Cédula ciudadanía"
 */
 
-//Continente, País, Departamento/Estado, Provincia, Distrito de acuerdo a la codificación que utiliza RENIEC
+* identifier[0].type.coding.system = $CSIdentificadoresPersona
+* identifier[0].type.coding.code = #01
+* identifier[0].type.coding.display = "Cédula de Identidad"
+
+* identifier[0].value = "98765"
 
 
+* name[0].given = "Luis"
+* name[0].family = "Sanchez"
 
-/* ----------------------------------------------------------------------------------------------------*/
-/* -------------------------EXTENSIONES----------------------------------------------------------------*/
-/* ----------------------------------------------------------------------------------------------------*/
-
-
-
+* gender = #male
+* birthDate = "1974-12-25"
