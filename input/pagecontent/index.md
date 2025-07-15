@@ -1,10 +1,1 @@
-
-Esta Guía sigue un formato especificado para **FHIR R4**, y se divide en varias páginas que proporcionan **Información** **General del IPS Perú** y la explicación técnica de los **Artefactos Generados** para iniciar el intercambio de información entre Sistemas de Información de Historias Clínicas Electrónicas – SIHCE  en el marco de la Ley N° 30024, Ley que crea el Registro Nacional de Historias Clínicas Electrónicas RENHICE, su reglamento y normativa complementaria. El menú se encuentra en la parte superior en la _barra de menú_.
-
-El **Estándar Internacional Resumen de Paciente Internacional (IPS por sus siglas en inglés),** adoptado para Perú, es un resumen elaborado a partir de la extracción de datos de las historias clínicas electrónicas gestionadas desde los Sistemas de Información de Historias Clínicas electrónicas – SIHCE que utilizan los establecimientos de salud y algunos servicios médicos de apoyo(si es que por la naturaleza de sus servicios debe usar historia clínica), que contiene información de Filiación con identificación personal, así como información clínica producto de la ejecución de actos médicos y actos de salud durante una atención de salud así como información complementaria.
-
-Como se especifica es International Patient Index (IPS) en EN 17269, así como en la ISO 27269:2021, toda vez que el IPS está diseñado para proporcionar soluciones genéricas para una aplicación global más allá de una región o país en particular. Para el caso de Perú tiene su equivalente en el constructo Información Clínica Resumida, o de ser utilizado en situaciones de emergencia Información Clínica Básica.
-
-El conjunto de datos que conforman el IPS es **mínimo y no exhaustivo; no especializado e independiente de la condición del paciente; pero sigue siendo clínicamente relevante**.
-
-El documento IPS está compuesto a su vez por subconjunto de datos básicos bien definidos y potencialmente reutilizables en diferentes situaciones clínicas, y en el caso de Perú, es el estándar país identificado para compartir información mediante el Registro Nacional de Historias Clínicas Electrónicas - RENHICE en Perú.
+En esta página contendrá la información inicial del proyecto, de Interoperabilidad.
