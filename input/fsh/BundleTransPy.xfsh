@@ -1,0 +1,74 @@
+Profile: BundleTransPy
+Parent: Bundle
+Id: BundleTransPy
+Title: "Bundle Transacciones Paraguay"
+
+//------Entradas
+* entry MS
+* entry ^slicing.discriminator.type = #profile
+* entry ^slicing.discriminator.path = "resource"
+* entry ^slicing.description = "Corresponde a cada una de las entradas del Bundle."
+* entry ^slicing.rules = #closed
+* entry.resource MS
+* entry ^short = "Transacciones de Bundle"
+
+* entry contains
+    SubmissionSet 1..1 and
+    DocumentRefs 0..* and
+    Documents 0..* and
+    Folders 0..* and
+    Patient 0..1
+
+
+
+
+* entry contains
+    Composition 0..1 and
+    Condition 0..* and    
+    Alergias 0..* and
+    Medicaciones 0..* and    
+    Patient 1..1 and
+    Organizacion 1..1 and
+    Profesional 1..1
+  
+
+
+
+
+/* DE MHD: 
+------------------------------------------------------------------------------------------------
+* entry contains
+    SubmissionSet 1..1 and
+    DocumentRefs 0..* and
+    Documents 0..* and
+    Folders 0..* and
+    Patient 0..1
+
+* entry[SubmissionSet] ^short = "the SubmissionSet"
+* entry[SubmissionSet] ^definition = "The SubmissionSet defines who submitted it, why they submitted it, when they submitted, what is in it, and where it is destine."
+* entry[SubmissionSet].resource 1..
+* entry[SubmissionSet].resource only $IHE.MHD.Minimal.SubmissionSet
+* entry[SubmissionSet].request 1..
+* entry[SubmissionSet].request.method = #POST
+*/
+
+/*
+* entry[Folders] ^short = "Folders"
+* entry[Folders] ^definition = "any Folders being created or updated"
+* entry[Folders].resource 1..
+* entry[Folders].resource only $IHE.MHD.Minimal.Folder
+* entry[Folders].request 1..
+* entry[Folders].request.method from $MHDprovideFolderActions (required)
+//*entry[Patient].request.method from $MHDprovidePatientActions (required)
+
+/*
+* entry[Documents] ^short = "the documents"
+* entry[Documents] ^definition = "the documents referenced by the DocumentReference resources"
+* entry[Documents].resource 1..
+* entry[Documents].resource only Binary
+* entry[Documents].request 1..
+* entry[Documents].request.method = #POST
+*/
+
+
+
