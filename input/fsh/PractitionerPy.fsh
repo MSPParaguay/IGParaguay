@@ -21,8 +21,8 @@ para efectos de identidad e individualización."
 
 
 
-/*
+/*-----------------------------------------
 codigo_medico	--> identificador del código del profesional de blanco, con su número de cédula
 numero_registro	--> Identifica el numero de registro profesional
 codigo_especialidad	--> Identifica el código de la especialidad
-*/
+------------------------------------------*/
