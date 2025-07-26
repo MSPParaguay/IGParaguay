@@ -31,6 +31,18 @@ menu:
   Inicio: index.html      
   Perfiles:
     "Paciente": StructureDefinition-PacientePy.html
+    "Practitioner": StructureDefinition-PractitionerPy.html
+    "Organización": StructureDefinition-OrganizationPy.html
+    "Condition": StructureDefinition-ConditionPy.html
+    "MedicationStatement": StructureDefinition-MedicationStatementPy.html
+    "MedicationAdministration": StructureDefinition-MedicationAdministrationPy.html
+    "AllergyIntolerance": StructureDefinition-AllergyIntolerancePy.html
+    "Immunization": StructureDefinition-ImmunizationPy.html
+    "DocumentReference": StructureDefinition-DocumentReferencePy.html
+    "Bundle": StructureDefinition-BundlePy.html
+  Transacciones:
+    "Detalle": Transacciones-PY.html
+    "Estructura IPS": IPS-PY.html
   Resumen: 
     "Versiones": versiones.html
     "Resumen": artifacts.html
