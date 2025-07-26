@@ -25,8 +25,8 @@ Description: "Información Clinica Basica Paraguay"
 * subject 1..1 
 * subject only Reference($canonicaPaciente)
 * subject MS
-* subject ^definition = "PENDIENTE."
-* subject ^short = "PENDIENTE"
+* subject ^definition = "Corresponde al paciente al que se refiere el documento."
+* subject ^short = "Paciente"
 * subject.reference 1..1 MS
 * subject.reference ^short = "Corresponde al paciente"
 
@@ -43,8 +43,8 @@ Description: "Información Clinica Basica Paraguay"
 * custodian 1..1
 * custodian only Reference($canonicaOrganization) 
 * custodian MS
-* custodian ^short = "ESTABLECIMIENTO?."
-* custodian ^definition = "ESTABLECIMIENTO?"
+* custodian ^short = "Establecimiento de salud que custodia el documento."
+* custodian ^definition = "Establecimiento de salud que custodia el documento."
 
 //* --- Fecha -----
 * date MS
