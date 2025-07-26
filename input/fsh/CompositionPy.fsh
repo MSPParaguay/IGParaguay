@@ -54,7 +54,7 @@ Description: "Información Clinica Basica Paraguay"
 //* --- Titulo de documento -----
 * title MS
 * title ^short = "Título del documento generado"
-* title ^definition = "PENDIENTE"
+* title ^definition = "Título del documento generado"
 
 
 * section 1.. MS

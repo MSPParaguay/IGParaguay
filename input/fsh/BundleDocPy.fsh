@@ -56,7 +56,7 @@ Description: "Estructura de transporte de  Documentos y recursos relaciondos."
 * entry[Alergias] ^definition = "Alergias/Intolerancias."
 
 * entry[Alergias].resource 1..
-//* entry[Alergias].resource only $canonicaAlergia 
+* entry[Alergias].resource only $canonicaAlergia 
 
 
 

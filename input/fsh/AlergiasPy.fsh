@@ -6,9 +6,9 @@ Alias: $allergy-reaction-snomed-ct-ips-free-set = http://hl7.org/fhir/uv/ips/Val
 
 
 
-Profile:        AlergiaPe
+Profile:        AlergiaPy
 Parent:         AllergyIntolerance
-Title:          "Alergias/Intolerancia Perú"
+Title:          "Alergias/Intolerancia Paraguay"
 Description:    "Alergias del paciente"
 
 //---paciente
@@ -21,7 +21,7 @@ Description:    "Alergias del paciente"
 
 * category 1..1	MS 
 * category ^short = "food | medication | environment | biologic"
-* category ^definition = "Categoria de la alergia o intolerancia detectada." 
+* category ^definition = "Categoría de la alergia o intolerancia detectada." 
 
 * criticality MS
 * criticality ^short = "low (baja) | high (alta) | unable-to-assess (incapaz de evaluar)"
@@ -40,7 +40,7 @@ Description:    "Alergias del paciente"
 * code.text 1..1 MS 
 * code.text ^short = "Descripción de la alergia o intolerancia."
 
-/*IPS 
+/*IPS */
 
 * code from $allergy-intolerance-uv-ips (preferred)
 * code ^binding.extension[0].extension[0].url = "purpose"
@@ -68,7 +68,7 @@ Description:    "Alergias del paciente"
 * code ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 * code ^binding.description = "Type of the substance/product, allergy or intolerance condition or or a code for absent/unknown allergy."
 
-*/
+
 
 /*
 * code 1..1 MS 
