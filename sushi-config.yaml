@@ -24,6 +24,10 @@ parameters:
 copyrightYear: 2023+
 releaseLabel: ci-build
 
+dependencies:
+  hl7.fhir.uv.ips: 1.1.0
+  ihe.iti.mhd: 4.2.2
+  # fhir.who.ddcc: current
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below..             │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯

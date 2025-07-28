@@ -1,9 +1,9 @@
-Profile: BundlePy
+Profile: BundleDocPy
 Parent: Bundle
-Id: BundlePy
+Id: BundleDocPy
 Title: "Bundle Paraguay"
 Description: "Estructura de transporte de  Documentos y recursos relaciondos."
-* ^name = "BundlePy_Documento"
+* ^name = "BundleDocPy_Documento"
 
 * type = #document
 * timestamp MS
