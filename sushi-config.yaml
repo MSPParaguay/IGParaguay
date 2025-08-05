@@ -36,14 +36,14 @@ menu:
   Perfiles:
     "Paciente": StructureDefinition-PacientePy.html
     "Practitioner": StructureDefinition-PractitionerPy.html
-    "Organización": StructureDefinition-OrganizationPy.html
+    "Organización": StructureDefinition-OrganizacionPy.html
     "Condition": StructureDefinition-ConditionPy.html
     "MedicationStatement": StructureDefinition-MedicationStatementPy.html
-    "MedicationAdministration": StructureDefinition-MedicationAdministrationPy.html
-    "AllergyIntolerance": StructureDefinition-AllergyIntolerancePy.html
+    #"MedicationAdministration": StructureDefinition-MedicationAdministrationPy.html
+    "AllergyIntolerance": StructureDefinition-AlergiaPy.html
     "Immunization": StructureDefinition-ImmunizationPy.html
     "DocumentReference": StructureDefinition-DocumentReferencePy.html
-    "Bundle": StructureDefinition-BundlePy.html
+    "BundleDocument": StructureDefinition-BundleDocPy.html
   Transacciones:
     "Detalle": Transacciones-PY.html
     "Estructura IPS": IPS-PY.html

@@ -2,7 +2,7 @@ Profile: BundleDocPy
 Parent: Bundle
 Id: BundleDocPy
 Title: "Bundle Paraguay"
-Description: "Estructura de transporte de  Documentos y recursos relaciondos."
+Description: "Estructura de Documentos y recursos relacionados."
 * ^name = "BundleDocPy_Documento"
 
 * type = #document
@@ -36,11 +36,6 @@ Description: "Estructura de transporte de  Documentos y recursos relaciondos."
 * entry[Composition].resource 1..
 * entry[Composition].resource only $canonicaComposition
 
-//metodo POST
-//* entry[Composition].request 1..
-//* entry[Composition].request.method = #POST
-
-
 
 /* --------- Condition ---------*/
 * entry[Condition] ^short = "Condiciones."
@@ -67,7 +62,6 @@ Description: "Estructura de transporte de  Documentos y recursos relaciondos."
 
 * entry[Medicaciones].resource 1..
 * entry[Medicaciones].resource only $canonicaMedication 
-//* entry[Medicaciones].request.method = #POST
 
 
 /* --------- PACIENTE ---------*/
@@ -92,42 +86,57 @@ Description: "Estructura de transporte de  Documentos y recursos relaciondos."
 * entry[Profesional].resource 1..
 * entry[Profesional].resource only $canonicaPractitioner
 
-/*
 
-/* DE MHD: 
-------------------------------------------------------------------------------------------------
-* entry contains
-    SubmissionSet 1..1 and
-    DocumentRefs 0..* and
-    Documents 0..* and
-    Folders 0..* and
-    Patient 0..1
+/*---------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------*/
+/*  Ejemplo de Bundle
 
-* entry[SubmissionSet] ^short = "the SubmissionSet"
-* entry[SubmissionSet] ^definition = "The SubmissionSet defines who submitted it, why they submitted it, when they submitted, what is in it, and where it is destine."
-* entry[SubmissionSet].resource 1..
-* entry[SubmissionSet].resource only $IHE.MHD.Minimal.SubmissionSet
-* entry[SubmissionSet].request 1..
-* entry[SubmissionSet].request.method = #POST
-*/
+Instance : BundleEjemploParaguay
+InstanceOf : BundleDocPy
+Title : "Bundle IPS - Paraguay"
 
-/*
-* entry[Folders] ^short = "Folders"
-* entry[Folders] ^definition = "any Folders being created or updated"
-* entry[Folders].resource 1..
-* entry[Folders].resource only $IHE.MHD.Minimal.Folder
-* entry[Folders].request 1..
-* entry[Folders].request.method from $MHDprovideFolderActions (required)
-//*entry[Patient].request.method from $MHDprovidePatientActions (required)
+Usage : #example
+Description: "Ejemplo de Bundle"
 
-/*
-* entry[Documents] ^short = "the documents"
-* entry[Documents] ^definition = "the documents referenced by the DocumentReference resources"
-* entry[Documents].resource 1..
-* entry[Documents].resource only Binary
-* entry[Documents].request 1..
-* entry[Documents].request.method = #POST
-*/
+* meta.profile = $canonicaBundle
+* type = #document
+
+* timestamp = "2025-05-01T10:30:00Z"
+* identifier.system = "urn:oid"
+* identifier.value = "28b95815-76ce-457b-b7ae-a972e527db40"
 
 
+* entry[0].fullUrl = "Composition/CompositionEjemploPy"
+* entry[=].resource = CompositionEjemploPy
 
+//Condition
+* entry[+].fullUrl = "Condition/ConditionEjemploPy"
+* entry[=].resource = ConditionEjemploPy
+
+
+//Alergia-Intolerancia
+* entry[+].fullUrl = "AllergyIntolerance/AlergiaEjemploPy"
+* entry[=].resource = AlergiaEjemploPy
+
+
+//Medicamentos
+* entry[+].fullUrl = "MedicationStatement/MedicationStatementEjemploPy"
+* entry[=].resource = MedicationStatementEjemploPy
+
+
+//Patient
+* entry[+].fullUrl = "Patient/PacienteEjemploPy"
+* entry[=].resource = PacienteEjemploPy
+
+//Organization
+* entry[+].fullUrl = "OrganizacionParaguay/OrganizacionEstablecimientoEjemplo"
+* entry[=].resource = OrganizacionEstablecimientoEjemploPy
+
+//Profesional -- 
+* entry[+].fullUrl = "Practitioner/ProfesionalEjemploPy"
+* entry[=].resource = ProfesionalEjemploPy
+
+
+
+
+ */

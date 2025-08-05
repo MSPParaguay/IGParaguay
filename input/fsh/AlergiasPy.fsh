@@ -69,7 +69,39 @@ Description:    "Alergias del paciente"
 * code ^binding.description = "Type of the substance/product, allergy or intolerance condition or or a code for absent/unknown allergy."
 
 
+/************************************************************************************/
 
+
+
+//-------------- Ejemplo Alergias-------------------------------------------------
+/*
+Instance: AlergiaEjemploPy
+InstanceOf: AlergiaPy
+Description: "Ejemplo de Alergia."
+
+Usage: #example
+
+
+* code.coding.system = "http://snomed.info/sct"
+* code.coding.code = "227493005"    
+
+* code.coding.display = "Alergia al polen de gramíneas"
+
+* clinicalStatus = #active
+* verificationStatus = #confirmed
+* patient.reference = "Paciente/12345"
+* category = #environment
+* criticality = #high
+* type = #allergy
+* onsetDateTime = "2023-01-01T00:00:00Z"
+
+
+
+
+
+
+
+/************************************/
 /*
 * code 1..1 MS 
 * code from $CIE10VS (preferred)

@@ -1,6 +1,6 @@
-Profile: Py_Transaccion_Document
+Profile: BundleTransaccPy
 Parent: https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.ProvideBundle
-Id: Py_Transaccion_Document
+Id: BundleTransaccPy
 
 * entry[FhirDocuments].resource 1..1
 * entry[FhirDocuments].resource only BundleDocPy
@@ -8,3 +8,9 @@ Id: Py_Transaccion_Document
 * entry[Patient].resource 1..1
 * entry[Patient].resource only PacientePy
 
+/*
+Instance : BundleEjemplo
+InstanceOf : BundleTransaccPy
+Title : "Bundle Transaccional Paraguay"
+
+*/
