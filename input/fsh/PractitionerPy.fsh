@@ -6,7 +6,7 @@ Description:    "Profesional de Paraguay."
 
 
 //------------Identificadores
-* identifier ^short = "Identificación del paciente."
+* identifier ^short = "Identificación del profesional."
 * identifier ^definition = "Elemento de dato que contiene el nombre y número de identificación de una determinada persona 
 para efectos de identidad e individualización."
 

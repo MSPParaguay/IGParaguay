@@ -17,10 +17,10 @@ Description:    "Organización de Salud, Establecimiento de Paraguay."
 
 
 * name MS
-* name ^short = "Nombre asignado al establecimiento de salud"
+* name ^short = "Nombre con el que se designa al establecimiento de salud."
 
 * type MS
-* type ^short = "Indica el tipo de la organización. " 
-* type ^definition = "Indica el tipo de la organización." 
+* type ^short = "Nombre identificador con el que se clasifica a un Establecimiento.. " 
+* type ^definition = "Nombre identificador con el que se clasifica a un Establecimiento.." 
 
 
