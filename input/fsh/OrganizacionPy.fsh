@@ -4,23 +4,25 @@ Title:          "Organizacion Paraguay"
 Description:    "Organización de Salud, Establecimiento de Paraguay."
 * ^name = "OrganizacionPy"
 
-* active ^short = "Estado de si es una Organización Validada o no (true|false)"
-* active ^definition = "Indicador si una organización sigue vigente en su rol dentro del sistema de salud"
-* active 1..
-
 * identifier 1.. MS
 * identifier.value 1.. MS
 * identifier.value ^short = "Número que indica la identificación."
-
-//* identifier.type 1.. MS
-* identifier.type ^short = "Tipo de indentificación."
 
 
 * name MS
 * name ^short = "Nombre con el que se designa al establecimiento de salud."
 
 * type MS
-* type ^short = "Nombre identificador con el que se clasifica a un Establecimiento.. " 
-* type ^definition = "Nombre identificador con el que se clasifica a un Establecimiento.." 
+* type ^short = "Tipo de establecimiento. Por ejemplo: Hospital, Centro de Salud, etc. "
+* type.text MS
 
+
+/**************************************************************************************************/
+Instance: OrganizacionEjemploPy
+InstanceOf: OrganizacionPy
+Description: "Ejemplo de Organización de Salud."
+Usage: #example
+* identifier.value = "0005000.00010102"
+* name = "HOSPITAL GENERAL DE CORONEL OVIEDO"
+* type.text = "HG"
 

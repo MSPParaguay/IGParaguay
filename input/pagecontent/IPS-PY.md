@@ -19,6 +19,7 @@ En este apartado se describen las diferentes secciones incluidas en el documento
 
 | **Entrada** | **Link** | **Descripción** |
 | --- | --- | --- |
-| ✅ **Antecedentes Diagnósiticos** | [Condition](StructureDefinition-Conditionco.html) | Representa los antecedentedes diagnósticos del paciente. |
-| ✅ **Medicación Actual** | [Medication Statement](StructureDefinition-MedicationStatementCo.html). | Representa la información de la medicación actual que toma el paciente. |
-| ✅ **Alergias Conocidas** | [Alergias](StructureDefinition-AlergiaCo.html). | Representa las alergias que tiene el paciente. |
+| ✅ **Antecedentes Diagnósiticos** | [Condition](StructureDefinition-ConditionPy.html) | Representa los antecedentedes diagnósticos del paciente. |
+| ✅ **Medicación Actual** | [Medication Statement](StructureDefinition-MedicationStatementPy.html). | Representa la información de la medicación actual que toma el paciente. |
+| ✅ **Alergias Conocidas** | [Alergias](StructureDefinition-AlergiaPy.html). | Representa las alergias que tiene el paciente. |
+| ✅ **Inmunizaciones** | [Inmunizaciones](StructureDefinition-ImmunizationPy.html). | Representa las inmunizaciones que tiene el paciente. |

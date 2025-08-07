@@ -33,20 +33,23 @@ dependencies:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Inicio: index.html      
-  Perfiles:
+  Perfiles Base:
     "Paciente": StructureDefinition-PacientePy.html
-    "Practitioner": StructureDefinition-PractitionerPy.html
+    "Profesional": StructureDefinition-PractitionerPy.html
     "Organización": StructureDefinition-OrganizacionPy.html
+  Perfiles Información Clínica:
     "Condition": StructureDefinition-ConditionPy.html
     "MedicationStatement": StructureDefinition-MedicationStatementPy.html
     #"MedicationAdministration": StructureDefinition-MedicationAdministrationPy.html
     "AllergyIntolerance": StructureDefinition-AlergiaPy.html
     "Immunization": StructureDefinition-ImmunizationPy.html
-    "DocumentReference": StructureDefinition-DocumentReferencePy.html
+  Perfiles Documentos: 
+    "Documento Clínico": StructureDefinition-CompositionPy.html
+    "Indice Documentos": StructureDefinition-DocumentReferencePy.html
     "BundleDocument": StructureDefinition-BundleDocPy.html
   Transacciones:
-    "Detalle": Transacciones-PY.html
     "Estructura IPS": IPS-PY.html
+    "Detalle": Transacciones-PY.html   
   Resumen: 
     "Versiones": versiones.html
     "Resumen": artifacts.html
