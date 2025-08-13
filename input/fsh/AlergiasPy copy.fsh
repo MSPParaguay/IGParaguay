@@ -6,7 +6,7 @@ Alias: $allergy-reaction-snomed-ct-ips-free-set = http://hl7.org/fhir/uv/ips/Val
 
 
 
-Profile:        AlergiaPy
+Profile:        AlergiaPySnomed
 Parent:         AllergyIntolerance
 Title:          "Alergias/Intolerancia Paraguay"
 Description:    "Alergias del paciente"
@@ -42,12 +42,31 @@ Description:    "Alergias del paciente"
 
 /*IPS */
 
-* code.text 1..1 MS
-* code.coding.code 1..1
-* code.coding.system 1..1
-* code.coding.code from $CIE10VS (preferred) 
-* code.coding.system = "http://hl7.org/fhir/sid/icd-10"
-* code.coding.display 1..1
+* code from $allergy-intolerance-uv-ips (preferred)
+* code ^binding.extension[0].extension[0].url = "purpose"
+* code ^binding.extension[=].extension[=].valueCode = #candidate
+* code ^binding.extension[=].extension[+].url = "valueSet"
+* code ^binding.extension[=].extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/ValueSet/allergy-intolerance-snomed-ct-ips-free-set"
+* code ^binding.extension[=].extension[+].url = "documentation"
+* code ^binding.extension[=].extension[=].valueMarkdown = "Type of the substance/product, allergy or intolerance condition."
+* code ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+
+* code ^binding.extension[+].extension[0].url = "purpose"
+* code ^binding.extension[=].extension[=].valueCode = #candidate
+* code ^binding.extension[=].extension[+].url = "valueSet"
+* code ^binding.extension[=].extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/ValueSet/whoatc-uv-ips"
+* code ^binding.extension[=].extension[+].url = "documentation"
+* code ^binding.extension[=].extension[=].valueMarkdown = "Type of the substance/product, allergy or intolerance condition."
+* code ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+
+* code ^binding.extension[+].extension[0].url = "purpose"
+* code ^binding.extension[=].extension[=].valueCode = #candidate
+* code ^binding.extension[=].extension[+].url = "valueSet"
+* code ^binding.extension[=].extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/ValueSet/absent-or-unknown-allergies-uv-ips"
+* code ^binding.extension[=].extension[+].url = "documentation"
+* code ^binding.extension[=].extension[=].valueMarkdown = "Absent and unknown codes for allergy or intolerance."
+* code ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+* code ^binding.description = "Type of the substance/product, allergy or intolerance condition or or a code for absent/unknown allergy."
 
 
 /************************************************************************************/

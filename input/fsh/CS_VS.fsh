@@ -21,7 +21,13 @@ Description:  "Conjunto de valores para los Identificadores de Persona."
 * ^version = "1.0.0"
 * ^status = #active
 
-
 * include codes from system IdentificadoresPersonaCS
 
+ValueSet: IdentificadoresProfesionalVS
+Title: "Identificadores de Profesional"
+Description:  "Conjunto de valores para los Identificadores de Profesional."
+* ^experimental = false
+* ^version = "1.0.0"
+* ^status = #active
 
+* $CSIdentificadoresPersona#01 "Cédula de Identidad" 
