@@ -9,5 +9,10 @@ Description:    "Inmunización del paciente"
 * patient MS
 * patient.reference 1.. MS
 
-* patient ^short = "Paciente sobre al que corresponde la alergia."
-* patient ^definition = "Paciente sobre al que corresponde la alergia." 
+* patient ^short = "Paciente sobre al que corresponde la vacuna."
+* patient ^definition = "Paciente sobre al que corresponde la vacuna."
+
+* vaccineCode 1..1 MS
+* vaccineCode ^short = "Código de la vacuna."
+* vaccineCode ^definition = "Código de la vacuna administrada al paciente."
+* vaccineCode.text MS

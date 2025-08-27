@@ -1,0 +1,30 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "IdentificadoresPersonaCS",
+  "id": "IdentificadoresPersonaCS",
+  "title": "Identificadores de Persona",
+  "description": "Conjunto de códigos para identificar a una persona.",
+  "url": "https://www.gob.py/minsa/fhir/CodeSystem/IdentificadoresPersonaCS",
+  "concept": [
+    {
+      "code": "01",
+      "display": "Cédula de Identidad",
+      "definition": "Cédula de Identidad"
+    },
+    {
+      "code": "02",
+      "display": "Cédula Extranjera",
+      "definition": "Cédula Extranjera"
+    },
+    {
+      "code": "03",
+      "display": "Pasaporte",
+      "definition": "Pasaporte"
+    }
+  ],
+  "experimental": false,
+  "caseSensitive": true,
+  "count": 3
+}

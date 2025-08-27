@@ -1,0 +1,282 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "CompositionPy",
+  "url": "https://www.gob.py/minsa/fhir/StructureDefinition/CompositionPy",
+  "name": "CompositionPy",
+  "title": "Documento Clinico Paraguay",
+  "status": "draft",
+  "description": "Información Clinica Basica Paraguay",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Composition",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Composition",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Composition.status",
+        "path": "Composition.status",
+        "short": "Estado valor fijo: -final-",
+        "definition": "Corresponde al estado del documento.",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.type",
+        "path": "Composition.type",
+        "short": "Tipo de Documento",
+        "definition": "Especifica el tipo de documento que se ha generado",
+        "mustSupport": true,
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "http://hl7.org/fhir/ValueSet/doc-typecodes"
+        }
+      },
+      {
+        "id": "Composition.subject",
+        "path": "Composition.subject",
+        "short": "Paciente",
+        "definition": "Corresponde al paciente al que se refiere el documento.",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.gob.py/minsa/fhir/StructureDefinition/PacientePy"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.subject.reference",
+        "path": "Composition.subject.reference",
+        "short": "Corresponde al paciente",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.date",
+        "path": "Composition.date",
+        "short": "Fecha de creación del documento",
+        "definition": "Fecha de creación del documento",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.author",
+        "path": "Composition.author",
+        "short": "Quien Ha creado el documento",
+        "definition": "Identifica al responsable de los datos ingresados al documento.",
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.gob.py/minsa/fhir/StructureDefinition/PractitionerPy"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.title",
+        "path": "Composition.title",
+        "short": "Título del documento generado",
+        "definition": "Título del documento generado",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.custodian",
+        "path": "Composition.custodian",
+        "short": "Establecimiento de salud que custodia el documento.",
+        "definition": "Establecimiento de salud que custodia el documento.",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.gob.py/minsa/fhir/StructureDefinition/OrganizacionPy"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section",
+        "path": "Composition.section",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "code"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "short": "Sección del documento",
+        "definition": "Sección de notificación de datos clínicos.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section.code",
+        "path": "Composition.section.code",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "example",
+          "valueSet": "http://hl7.org/fhir/ValueSet/doc-section-codes"
+        }
+      },
+      {
+        "id": "Composition.section:sectionDiagnosticos",
+        "path": "Composition.section",
+        "sliceName": "sectionDiagnosticos",
+        "short": "Sección Diagnósticos",
+        "definition": "Descripción de lista de diagnósticos determinados en el paciente.",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionDiagnosticos.title",
+        "path": "Composition.section.title",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionDiagnosticos.code",
+        "path": "Composition.section.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "11450-4",
+              "system": "http://loinc.org"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Composition.section:sectionDiagnosticos.entry",
+        "path": "Composition.section.entry",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "profile",
+              "path": "resolve()"
+            }
+          ],
+          "rules": "open"
+        },
+        "short": "Diagnósticos conocidos actualmente de relevancia para determinaciones clínicas en el paciente.",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.gob.py/minsa/fhir/StructureDefinition/ConditionPy"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionMedicacion",
+        "path": "Composition.section",
+        "sliceName": "sectionMedicacion",
+        "short": "Sección Medicacion",
+        "definition": "Descripción de lista de medicacion del paciente.",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionMedicacion.title",
+        "path": "Composition.section.title",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionMedicacion.code",
+        "path": "Composition.section.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "10160-0",
+              "system": "http://loinc.org"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Composition.section:sectionMedicacion.entry",
+        "path": "Composition.section.entry",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "profile",
+              "path": "resolve()"
+            }
+          ],
+          "rules": "open"
+        },
+        "short": "Medicación del paciente.",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.gob.py/minsa/fhir/StructureDefinition/MedicationStatementPy"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionAlergias",
+        "path": "Composition.section",
+        "sliceName": "sectionAlergias",
+        "short": "Sección Alergias",
+        "definition": "Descripción de lista de alergias conocidas del paciente.",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionAlergias.title",
+        "path": "Composition.section.title",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionAlergias.code",
+        "path": "Composition.section.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "48765-2",
+              "system": "http://loinc.org"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Composition.section:sectionAlergias.entry",
+        "path": "Composition.section.entry",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "profile",
+              "path": "resolve()"
+            }
+          ],
+          "rules": "open"
+        },
+        "short": "Alergias del paciente.",
+        "min": 1,
+        "mustSupport": true
+      }
+    ]
+  }
+}

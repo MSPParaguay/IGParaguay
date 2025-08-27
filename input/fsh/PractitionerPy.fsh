@@ -14,6 +14,13 @@ para efectos de identidad e individualización."
 * identifier.value 1.. MS
 * identifier.value ^short = "Número que indica la identificación."
 
+* identifier.type 1.. MS
+* identifier.type ^short = "Tipo de indentificación."
+* identifier.type.coding.code from IdentificadoresProfesionalVS
+* identifier.type.coding 1.. MS
+* identifier.type.coding.code 1.. MS
+
+
 
 * name 1.. MS
 * name.family and name.given MS

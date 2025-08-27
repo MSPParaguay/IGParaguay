@@ -1,0 +1,52 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ImmunizationPy",
+  "url": "https://www.gob.py/minsa/fhir/StructureDefinition/ImmunizationPy",
+  "name": "ImmunizationPy",
+  "title": "Inmunización Paraguay",
+  "status": "draft",
+  "description": "Inmunización del paciente",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Immunization",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Immunization",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Immunization.vaccineCode",
+        "path": "Immunization.vaccineCode",
+        "short": "Código de la vacuna.",
+        "definition": "Código de la vacuna administrada al paciente.",
+        "mustSupport": true
+      },
+      {
+        "id": "Immunization.vaccineCode.text",
+        "path": "Immunization.vaccineCode.text",
+        "mustSupport": true
+      },
+      {
+        "id": "Immunization.patient",
+        "path": "Immunization.patient",
+        "short": "Paciente sobre al que corresponde la vacuna.",
+        "definition": "Paciente sobre al que corresponde la vacuna.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.gob.py/minsa/fhir/StructureDefinition/PacientePy"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Immunization.patient.reference",
+        "path": "Immunization.patient.reference",
+        "min": 1,
+        "mustSupport": true
+      }
+    ]
+  }
+}

@@ -20,16 +20,12 @@ Description:    "Alergias del paciente"
 * patient ^definition = "Paciente sobre al que corresponde la alergia." 
 
 * category 1..1	MS 
-* category ^short = "food | medication | environment | biologic"
+* category ^short = "food (comida) | medication (medicación) | environment (medio ambiente) | biologic (biológico)"
 * category ^definition = "Categoría de la alergia o intolerancia detectada." 
 
 * criticality MS
 * criticality ^short = "low (baja) | high (alta) | unable-to-assess (incapaz de evaluar)"
 * criticality ^definition = "Grado de criticidad." 
-
-* type MS
-
-* onsetDateTime MS
 
 * reaction MS
 * reaction ^short = "Reacción adversa."

@@ -4,7 +4,7 @@
 # │  https://fshschool.org/docs/sushi/configuration/#full-configuration                            │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.py.CorePY
-canonical: https://www.gob.py/minsa/fhir
+canonical: https://mspbs.gov.py/fhir
 version: 0.1
 name: CorePY-ImplementationGuide
 
@@ -12,7 +12,7 @@ title: Interoperabilidad de Historia Clínica - PARAGUAY
 status: draft
 publisher: 
   name: MSP PARAGUAY
-  url: https://www.gob.py/minsa
+  url: https://mspbs.gov.py
 description: Ministerio de Salud , PARAGUAY - Interoperabilidad de Historia Clínica IHC - 
 jurisdiction: urn:iso:std:iso:3166#PY
 license: CC0-1.0

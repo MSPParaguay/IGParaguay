@@ -24,10 +24,6 @@ Description:    "Condicion del paciente"
 * code.coding.system = "http://hl7.org/fhir/sid/icd-10"
 * code.coding.display 1..1
 
-* onsetPeriod MS
-* onsetPeriod.start MS
-* onsetPeriod.end MS
-
 * note MS
 * note ^short = "Observaciones/anotaciones complementarias." 
 * note ^definition = "Observaciones/anotaciones complementarias"
