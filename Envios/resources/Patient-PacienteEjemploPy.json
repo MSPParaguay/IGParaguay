@@ -1,0 +1,33 @@
+{
+  "resourceType": "Patient",
+  "id": "PacienteEjemploPy",
+  "meta": {
+    "profile": [
+      "https://www.gob.py/minsa/fhir/StructureDefinition/PacientePy"
+    ]
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "https://www.gob.py/minsa/fhir/CodeSystem/IdentificadoresPersonaCS",
+            "code": "01",
+            "display": "Cédula de Identidad"
+          }
+        ]
+      },
+      "value": "98765"
+    }
+  ],
+  "name": [
+    {
+      "given": [
+        "Luis"
+      ],
+      "family": "Sanchez"
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1974-12-25"
+}

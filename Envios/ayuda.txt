@@ -1,0 +1,6 @@
+PS D:\7.PARAGUAY\GuiaImpPY\IGParaguay\fsh-generated> python fhir_put_folder.py --base-url http://localhost:8080/fhir  --folder ./resources 
+
+
+
+---> PARADO EN  D:\7.PARAGUAY\GuiaImpPY\IGParaguay\Envios>  
+misma sentencia. 

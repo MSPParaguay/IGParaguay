@@ -8,7 +8,6 @@ Description:    "Organización de Salud, Establecimiento de Paraguay."
 * identifier.value 1.. MS
 * identifier.value ^short = "Número que indica la identificación."
 
-
 * name MS
 * name ^short = "Nombre con el que se designa al establecimiento de salud."
 

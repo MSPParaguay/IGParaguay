@@ -1,0 +1,209 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "BundleDocPy",
+  "url": "https://www.gob.py/minsa/fhir/StructureDefinition/BundleDocPy",
+  "name": "BundleDocPy_Documento",
+  "title": "Bundle Paraguay",
+  "status": "draft",
+  "description": "Estructura de Documentos y recursos relacionados.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Bundle",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Bundle",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Bundle.identifier",
+        "path": "Bundle.identifier",
+        "mustSupport": true
+      },
+      {
+        "id": "Bundle.type",
+        "path": "Bundle.type",
+        "patternCode": "document"
+      },
+      {
+        "id": "Bundle.timestamp",
+        "path": "Bundle.timestamp",
+        "mustSupport": true
+      },
+      {
+        "id": "Bundle.entry",
+        "path": "Bundle.entry",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "profile",
+              "path": "resource"
+            }
+          ],
+          "description": "Corresponde a cada una de las entradas del Bundle.",
+          "rules": "closed"
+        },
+        "min": 3,
+        "mustSupport": true
+      },
+      {
+        "id": "Bundle.entry.resource",
+        "path": "Bundle.entry.resource",
+        "mustSupport": true
+      },
+      {
+        "id": "Bundle.entry:Composition",
+        "path": "Bundle.entry",
+        "sliceName": "Composition",
+        "short": "RDA - Composition.",
+        "definition": "Registro Digital de Atención - Composition",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Bundle.entry:Composition.resource",
+        "path": "Bundle.entry.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "Composition",
+            "profile": [
+              "https://www.gob.py/minsa/fhir/StructureDefinition/CompositionPy"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:Condition",
+        "path": "Bundle.entry",
+        "sliceName": "Condition",
+        "short": "Condiciones.",
+        "definition": "Corresponden a los diagnosticos.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Bundle.entry:Condition.resource",
+        "path": "Bundle.entry.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "Condition",
+            "profile": [
+              "https://www.gob.py/minsa/fhir/StructureDefinition/ConditionPy"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:Alergias",
+        "path": "Bundle.entry",
+        "sliceName": "Alergias",
+        "short": "Alergias/Intolerancias",
+        "definition": "Alergias/Intolerancias.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Bundle.entry:Alergias.resource",
+        "path": "Bundle.entry.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "AllergyIntolerance",
+            "profile": [
+              "https://www.gob.py/minsa/fhir/StructureDefinition/AlergiaPy"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:Medicaciones",
+        "path": "Bundle.entry",
+        "sliceName": "Medicaciones",
+        "short": "Medicamentos",
+        "definition": "Medicamentos",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Bundle.entry:Medicaciones.resource",
+        "path": "Bundle.entry.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "MedicationStatement",
+            "profile": [
+              "https://www.gob.py/minsa/fhir/StructureDefinition/MedicationStatementPy"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:Patient",
+        "path": "Bundle.entry",
+        "sliceName": "Patient",
+        "short": "Paciente",
+        "definition": "Paciente.",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Bundle.entry:Patient.resource",
+        "path": "Bundle.entry.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "Patient",
+            "profile": [
+              "https://www.gob.py/minsa/fhir/StructureDefinition/PacientePy"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:Organizacion",
+        "path": "Bundle.entry",
+        "sliceName": "Organizacion",
+        "short": "Establecimiento",
+        "definition": "Establecimiento.",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Bundle.entry:Organizacion.resource",
+        "path": "Bundle.entry.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "Organization",
+            "profile": [
+              "https://www.gob.py/minsa/fhir/StructureDefinition/OrganizacionPy"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:Profesional",
+        "path": "Bundle.entry",
+        "sliceName": "Profesional",
+        "short": "Profesional",
+        "definition": "Profesional.",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Bundle.entry:Profesional.resource",
+        "path": "Bundle.entry.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "Practitioner",
+            "profile": [
+              "https://www.gob.py/minsa/fhir/StructureDefinition/PractitionerPy"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

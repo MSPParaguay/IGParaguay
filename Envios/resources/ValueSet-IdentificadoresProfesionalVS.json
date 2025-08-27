@@ -1,0 +1,24 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "IdentificadoresProfesionalVS",
+  "id": "IdentificadoresProfesionalVS",
+  "title": "Identificadores de Profesional",
+  "description": "Conjunto de valores para los Identificadores de Profesional.",
+  "url": "https://www.gob.py/minsa/fhir/ValueSet/IdentificadoresProfesionalVS",
+  "experimental": false,
+  "version": "1.0.0",
+  "compose": {
+    "include": [
+      {
+        "system": "https://www.gob.py/minsa/fhir/CodeSystem/IdentificadoresPersonaCS",
+        "concept": [
+          {
+            "code": "01",
+            "display": "Cédula de Identidad"
+          }
+        ]
+      }
+    ]
+  }
+}

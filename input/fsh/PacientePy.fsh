@@ -11,7 +11,7 @@ Description: "En esta sección se presentará un resumen de la información rela
 * name ^short = "Nombres y Apellidos del Paciente."
 * name ^definition = "Nombre patronímico que aparece en el documento de identidad."
 
-* name.family ^short = "Apellidos del usuario de salud / paciente."
+* name.family ^short = "Apellidos del usuario de salud, paciente."
 * name.family and name.given MS
 * name.family 1..
 
@@ -52,29 +52,21 @@ para efectos de identidad e individualización."
 
 
 //--------------Ejemplo 3 - paciente resumido --------------------------------------------------//
-/*
+
 Instance: PacienteEjemploPy
 InstanceOf: PacientePy
 Description: "Ejemplo de Paciente."
 
 Usage: #example
 
-/** identifier[0].type.coding.system = $cs_identper //* identifier.type.coding.system = $cs_identper
-* identifier[0].type.coding.code = #CC //* identifier.type.coding.code = #CC
-* identifier[0].type.coding.display = "Cédula ciudadanía"
-*/
-/*
 * identifier[0].type.coding.system = $CSIdentificadoresPersona
 * identifier[0].type.coding.code = #01
 * identifier[0].type.coding.display = "Cédula de Identidad"
 
 * identifier[0].value = "98765"
-* identifier[0].system = "Directo Nacional de Identificación Civil (DNIC)"
-
 
 * name[0].given = "Luis"
 * name[0].family = "Sanchez"
 
 * gender = #male
 * birthDate = "1974-12-25"
-*/

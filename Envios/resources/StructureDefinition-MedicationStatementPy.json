@@ -1,0 +1,122 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "MedicationStatementPy",
+  "url": "https://www.gob.py/minsa/fhir/StructureDefinition/MedicationStatementPy",
+  "name": "MedicationStatementPy",
+  "title": "Medication Paraguay",
+  "status": "draft",
+  "description": "Medicación del paciente",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "MedicationStatement",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationStatement",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "MedicationStatement.status",
+        "path": "MedicationStatement.status",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement.medication[x]",
+        "path": "MedicationStatement.medication[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "MedicationStatement.medication[x]:medicationCodeableConcept",
+        "path": "MedicationStatement.medication[x]",
+        "sliceName": "medicationCodeableConcept",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement.medication[x]:medicationCodeableConcept.text",
+        "path": "MedicationStatement.medication[x].text",
+        "short": "Denominación de productos farmacéuticos (Nombre de medicamentos coherentes y concordante).",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement.subject",
+        "path": "MedicationStatement.subject",
+        "short": "Paciente sobre al que corresponde la Medicacion.",
+        "definition": "Paciente sobre al que corresponde la Medicacion.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.gob.py/minsa/fhir/StructureDefinition/PacientePy"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement.subject.reference",
+        "path": "MedicationStatement.subject.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement.effective[x]",
+        "path": "MedicationStatement.effective[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "MedicationStatement.effective[x]:effectiveDateTime",
+        "path": "MedicationStatement.effective[x]",
+        "sliceName": "effectiveDateTime",
+        "short": "Fecha de prescripción.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement.dosage",
+        "path": "MedicationStatement.dosage",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement.dosage.text",
+        "path": "MedicationStatement.dosage.text",
+        "short": "Dosis del medicamento.",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement.dosage.route.text",
+        "path": "MedicationStatement.dosage.route.text",
+        "short": "Vía de administración.",
+        "mustSupport": true
+      }
+    ]
+  }
+}
