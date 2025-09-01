@@ -26,3 +26,23 @@ Description:    "Medicación del paciente"
 
 * effectiveDateTime MS
 * effectiveDateTime ^short = "Fecha de prescripción."
+
+
+
+
+Instance: MedicationStatementEjemploParaguay
+InstanceOf: MedicationStatement
+Usage: #example
+Description: "Ejemplo de MedicationStatement/MedicaciónPaciente."
+
+* meta.profile = $canonicaMedication
+
+* subject = Reference(Patient/PacienteEjemploParaguay)
+* status = #active
+
+* medicationCodeableConcept.text = "Paracetamol"
+
+* dosage.text = "1 tableta de 500 mg cada 8 horas"
+* dosage.route.text = "Oral"
+
+* effectiveDateTime = "2023-01-02"

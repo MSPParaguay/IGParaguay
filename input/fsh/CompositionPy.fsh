@@ -183,9 +183,10 @@ Description: "Ejemplo de Documento Resumen de Paciente Perú."
 * author.identifier.type.coding.system = $cs_identper#CC
 * author.identifier.value = "12345"
 */
+
 /*
 * author = Reference(Practitioner/ProfesionalEjemploPy)
-* title = "Resumen de Paciente IPS - Perú"
+* title = "Resumen de Paciente IPS - Paraguay"
 
 * custodian = Reference(Organization/OrganizacionEstablecimientoEjemplo)
 

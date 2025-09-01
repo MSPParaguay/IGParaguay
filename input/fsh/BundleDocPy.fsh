@@ -87,11 +87,9 @@ Description: "Estructura de Documentos y recursos relacionados."
 * entry[Profesional].resource only $canonicaPractitioner
 
 
-/*---------------------------------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------------------------------*/
-/*  Ejemplo de Bundle
+/*************************************************************************************************/
 
-Instance : BundleEjemploParaguay
+Instance : BundleDocumentEjemploParaguay
 InstanceOf : BundleDocPy
 Title : "Bundle IPS - Paraguay"
 
@@ -101,42 +99,41 @@ Description: "Ejemplo de Bundle"
 * meta.profile = $canonicaBundle
 * type = #document
 
-* timestamp = "2025-05-01T10:30:00Z"
+* timestamp = "2023-05-01T10:30:00Z"
 * identifier.system = "urn:oid"
 * identifier.value = "28b95815-76ce-457b-b7ae-a972e527db40"
 
 
-* entry[0].fullUrl = "Composition/CompositionEjemploPy"
-* entry[=].resource = CompositionEjemploPy
+* entry[0].fullUrl = "Composition/CompositionEjemploParaguay"
+* entry[=].resource = CompositionEjemploParaguay
 
 //Condition
-* entry[+].fullUrl = "Condition/ConditionEjemploPy"
-* entry[=].resource = ConditionEjemploPy
+* entry[+].fullUrl = "Condition/ConditionEjemploPeru"
+* entry[=].resource = ConditionEjemploPeru
 
 
 //Alergia-Intolerancia
-* entry[+].fullUrl = "AllergyIntolerance/AlergiaEjemploPy"
-* entry[=].resource = AlergiaEjemploPy
+* entry[+].fullUrl = "AllergyIntolerance/AlergiaPeruOtra"
+* entry[=].resource = AlergiaPeruOtra
 
 
-//Medicamentos
-* entry[+].fullUrl = "MedicationStatement/MedicationStatementEjemploPy"
-* entry[=].resource = MedicationStatementEjemploPy
+//Alergia-Intolerancia
+* entry[+].fullUrl = "AllergyIntolerance/AlergiaPeruMedicamento"
+* entry[=].resource = AlergiaPeruMedicamento
+
+//MEdicamentos
+* entry[+].fullUrl = "MedicationStatement/MedicationStatementEjemploParaguay"
+* entry[=].resource = MedicationStatementEjemploParaguay
 
 
 //Patient
-* entry[+].fullUrl = "Patient/PacienteEjemploPy"
-* entry[=].resource = PacienteEjemploPy
+* entry[+].fullUrl = "Patient/PacienteEjemploParaguay"
+* entry[=].resource = PacienteEjemploParaguay
 
 //Organization
-* entry[+].fullUrl = "OrganizacionParaguay/OrganizacionEstablecimientoEjemplo"
-* entry[=].resource = OrganizacionEstablecimientoEjemploPy
+//* entry[+].fullUrl = "OrganizacionPe/OrganizacionEstablecimientoEjemplo"
+//* entry[=].resource = OrganizacionEstablecimientoEjemplo
 
 //Profesional -- 
-* entry[+].fullUrl = "Practitioner/ProfesionalEjemploPy"
-* entry[=].resource = ProfesionalEjemploPy
-
-
-
-
- */
+* entry[+].fullUrl = "Practitioner/ProfesionalEjemploParaguay"
+* entry[=].resource = ProfesionalEjemploParaguay

@@ -1,0 +1,18 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "IdentificadoresPersonaVS",
+  "id": "IdentificadoresPersonaVS",
+  "title": "Identificadores de Persona",
+  "description": "Conjunto de valores para los Identificadores de Persona.",
+  "url": "https://mspbs.gov.py/fhir/ValueSet/IdentificadoresPersonaVS",
+  "experimental": false,
+  "version": "1.0.0",
+  "compose": {
+    "include": [
+      {
+        "system": "https://mspbs.gov.py/fhir/CodeSystem/IdentificadoresPersonaCS"
+      }
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "BundleTransaccPy",
+  "url": "https://mspbs.gov.py/fhir/StructureDefinition/BundleTransaccPy",
+  "name": "BundleTransaccPy",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Bundle",
+  "baseDefinition": "https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.ProvideBundle",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Bundle.entry:FhirDocuments",
+        "path": "Bundle.entry",
+        "sliceName": "FhirDocuments"
+      },
+      {
+        "id": "Bundle.entry:FhirDocuments.resource",
+        "path": "Bundle.entry.resource",
+        "type": [
+          {
+            "code": "Bundle",
+            "profile": [
+              "https://mspbs.gov.py/fhir/StructureDefinition/BundleDocPy"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:Patient",
+        "path": "Bundle.entry",
+        "sliceName": "Patient"
+      },
+      {
+        "id": "Bundle.entry:Patient.resource",
+        "path": "Bundle.entry.resource",
+        "type": [
+          {
+            "code": "Patient",
+            "profile": [
+              "https://mspbs.gov.py/fhir/StructureDefinition/PacientePy"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

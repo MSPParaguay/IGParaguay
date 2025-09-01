@@ -33,3 +33,16 @@ codigo_medico	--> identificador del código del profesional de blanco, con su n�
 numero_registro	--> Identifica el numero de registro profesional
 codigo_especialidad	--> Identifica el código de la especialidad
 ------------------------------------------*/
+
+Instance: PractitionerEjemploPy
+InstanceOf: PractitionerPy
+Description: "Ejemplo de Profesional."
+
+* name.family = "Doe"
+* name.given = "John"
+
+* identifier[0].type.coding.system = $CSIdentificadoresProfesional
+* identifier[0].type.coding.code = #01
+* identifier[0].type.coding.display = "Cédula de Identidad"
+
+* identifier[0].value = "5555555"

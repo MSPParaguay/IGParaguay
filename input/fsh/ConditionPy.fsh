@@ -32,42 +32,27 @@ Description:    "Condicion del paciente"
 * verificationStatus ^short = "unconfirmed | provisional | differential | confirmed | refuted | entered-in-error" 
 
 
+/********************************************************************************************************/
+Alias: $condition-ver-status = http://terminology.hl7.org/CodeSystem/condition-ver-status
 
-/*
-//----Code
+Instance: ConditionEjemploParaguay
+InstanceOf: ConditionPy
+Usage: #example
+Description: "Ejemplo de Condición/Antecedente de Paciente."
 
+* meta.profile = $canonicaCondition
 
+* subject = Reference(Patient/PacienteEjemploPy)
 
-* code 1..1 MS
+* code = http://hl7.org/fhir/sid/icd-10#E10.4 "Type 1 diabetes mellitus : With neurological complications"
 
-* code only $CodeableConcept-uv-ips
-* code ^slicing.discriminator.type = #pattern
-* code ^slicing.discriminator.path = "$this"
-* code ^slicing.description = "Discriminated by the bound value set"
-* code ^slicing.rules = #open
-* code ^definition = "Identification of the condition, problem or diagnosis or recording of \"problem absent\" or of \"problems unknown\"."
-* code contains
-    problemGPSCode 0..1 MS and
-    absentOrUnknownProblem 0..1 MS
-* code[problemGPSCode] from $core-problem-finding-situation-event-gps-uv-ips (required)
-* code[problemGPSCode] ^short = "Code for a problem from the SNOMED CT GPS code set"
-* code[problemGPSCode] ^definition = "Code for a clinical problem that is selected from the SNOMED CT GPS code set."
-* code[problemGPSCode] ^binding.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
-* code[problemGPSCode] ^binding.extension.valueString = "problemGPSCode"
-* code[problemGPSCode] ^binding.description = "problemGPS"
-* code[absentOrUnknownProblem] from $absent-or-unknown-problems-uv-ips (required)
-* code[absentOrUnknownProblem] ^short = "Code for absent problem or for unknown problem"
-* code[absentOrUnknownProblem] ^definition = "Code representing the statement \"absent problem\" or the statement \"problems unknown\""
-* code[absentOrUnknownProblem] ^binding.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
-* code[absentOrUnknownProblem] ^binding.extension.valueString = "absentOrUnknownProblem"
-* code[absentOrUnknownProblem] ^binding.description = "Absent problem or unknown problem"
+* code.text = "Diabetes Tipo 1, con complicaciones neurologicas"
+* code.coding.code = #E10.4 
+* code.coding.system = "http://hl7.org/fhir/sid/icd-10"
+* code.coding.display = "Type 1 diabetes mellitus : With neurological complications"
 
+* verificationStatus = $condition-ver-status#confirmed
+* onsetPeriod.start =   "2023-01-13"
 
-//--- verificationStatus
-* verificationStatus only $CodeableConcept-uv-ips
-* verificationStatus MS
-* verificationStatus ^comment = "This element is labeled as a modifier because the status contains the code refuted and entered-in-error that mark the Condition as not currently valid."
+* note.text = "Antecedentes de diabetes de tipo 1"
 
-
-
-*/
