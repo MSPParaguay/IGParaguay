@@ -104,22 +104,19 @@ Description: "Ejemplo de Bundle"
 * identifier.value = "28b95815-76ce-457b-b7ae-a972e527db40"
 
 
-* entry[0].fullUrl = "Composition/CompositionEjemploParaguay"
-* entry[=].resource = CompositionEjemploParaguay
+* entry[0].fullUrl = "Composition/CompositionEjemploPy"
+* entry[=].resource = CompositionEjemploPy
 
 //Condition
-* entry[+].fullUrl = "Condition/ConditionEjemploPeru"
-* entry[=].resource = ConditionEjemploPeru
-
-
-//Alergia-Intolerancia
-* entry[+].fullUrl = "AllergyIntolerance/AlergiaPeruOtra"
-* entry[=].resource = AlergiaPeruOtra
+* entry[+].fullUrl = "Condition/ConditionEjemploParaguay"
+* entry[=].resource = ConditionEjemploParaguay
 
 
 //Alergia-Intolerancia
 * entry[+].fullUrl = "AllergyIntolerance/AlergiaPeruMedicamento"
 * entry[=].resource = AlergiaPeruMedicamento
+
+
 
 //MEdicamentos
 * entry[+].fullUrl = "MedicationStatement/MedicationStatementEjemploParaguay"
@@ -127,13 +124,13 @@ Description: "Ejemplo de Bundle"
 
 
 //Patient
-* entry[+].fullUrl = "Patient/PacienteEjemploParaguay"
-* entry[=].resource = PacienteEjemploParaguay
+* entry[+].fullUrl = "Patient/PacienteEjemploPy"
+* entry[=].resource = PacienteEjemploPy
 
 //Organization
 //* entry[+].fullUrl = "OrganizacionPe/OrganizacionEstablecimientoEjemplo"
 //* entry[=].resource = OrganizacionEstablecimientoEjemplo
 
 //Profesional -- 
-* entry[+].fullUrl = "Practitioner/ProfesionalEjemploParaguay"
-* entry[=].resource = ProfesionalEjemploParaguay
+* entry[+].fullUrl = "Practitioner/PractitionerEjemploPy"
+* entry[=].resource = PractitionerEjemploPy

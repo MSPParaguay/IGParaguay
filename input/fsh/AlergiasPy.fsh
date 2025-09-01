@@ -54,9 +54,11 @@ InstanceOf: AlergiaPy
 Usage: #example
 Description: "Ejemplo Alergia a Medicamento."
 
-* clinicalStatus = $allergyintolerance-clinical-status#active
-* verificationStatus = $allergyintolerance-verification-status#confirmed
+* clinicalStatus = #active
+* verificationStatus = #confirmed
 
+* code.coding.code = #T36.0X5
+* code.coding.system = "http://hl7.org/fhir/sid/icd-10"
 * code.text = "alergia a penicilina"
 * code.coding.display = "alergia a penicilina"
 * patient =  Reference(Patient/PacienteEjemploParaguay) "Paciente Ejemplo"

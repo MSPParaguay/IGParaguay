@@ -136,30 +136,31 @@ Description: "Información Clinica Basica Paraguay"
 
 //-------------- Ejemplo Composition--------------------------------------------------/
 
-/*
+
 Instance: CompositionEjemploPy
 InstanceOf: CompositionPy
 Description: "Ejemplo de Documento-Composition."
 
 Usage: #example
 
-
-
 * type = $loinc#11450-4
-* type ^short = "Tipo de Documento: Ejemplo de Documento-Composition"
-
-* subject.reference = "PacientePy"
-* subject.reference ^short = "Paciente: Ejemplo de Paciente"
-* author.reference = "PractitionerPy"
-* custodian.reference = "OrganizacionPy"
-* date = "2023-10-01"
+* subject = Reference(Patient/PacienteEjemploPy)
+* author = Reference(Practitioner/PractitionerEjemploPy)
+* custodian = Reference(Organization/OrganizacionEjemploPy)
+* date = "2025-09-01"
 * title = "Ejemplo de Documento Clinico Paraguay"
+* status = #final
 
 
-* subject = PacienteEjemploPy
+* section[0].title = "Diagnósticos"
+
+* section[=].code = http://loinc.org#11450-4 "Problem list Reported"
+* section[=].text.status = #generated
+* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">CONDICIONES</div>"
+* section[=].entry = Reference(Condition/ConditionEjemploParaguay)
 
 
-*/
+
 /******************************************************************************************************************/
 
 /*

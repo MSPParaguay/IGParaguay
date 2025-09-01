@@ -22,3 +22,4 @@ Alias: $canonicaBundle = https://mspbs.gov.py/fhir/StructureDefinition/BundlePy
 
 
 Alias: $CIE10VS = https://mspbs.gov.py/fhir/ValueSet/CIE10VS
+Alias: $CSIdentificadoresProfesional = https://mspbs.gov.py/fhir/CodeSystem/IdentificadoresProfesionalCS
