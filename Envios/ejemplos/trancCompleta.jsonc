@@ -1,0 +1,39 @@
+{
+    "resourceType": "Bundle",
+    "type": "transaction",
+    "timestamp": "2025-09-03T10:30:00Z",
+    "entry": [
+        {
+            "fullUrl": "urn:uuid:391699f0-f37b-11ec-b939-0242ac120003",
+            "resource": {
+               /**comienza aqui el recurso DOC REF**/
+            },
+            "request": {
+                "method": "POST",
+                "url": "DocumentReference"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:391699f0-f37b-11ec-b939-0242ac120002",
+            "resource": {
+               /**comienza aqui el recurso BUNDLE DOC**/
+
+            },
+            "request": {
+                "method": "POST",
+                "url": "Bundle"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:2f8d6332-e339-457d-b5e8-1a140a1f3ea1",
+            "resource": {
+                /**comienza aqui el recurso PACIENTE**/
+
+            },
+            "request": {
+                "method": "POST",
+                "url": "Patient"
+            }
+        }
+    ]
+}

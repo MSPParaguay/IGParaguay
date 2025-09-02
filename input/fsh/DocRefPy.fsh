@@ -64,4 +64,26 @@ Description: "Documento utilizado para guardar referencias."
 * content.attachment.url ^short = "Se debe completar URL del Bundle-Document, enviado dentro de la transacción."
 
 
+/**********************************************************************/
+
+Instance: DocumentReferenceEjemploPy
+InstanceOf: DocumentReferencePy 
+Usage: #example
+Title : "DocumentReference"
+Description: "Ejemplo de Document Reference."
+
+* status = #current 
+* date = "2025-09-01T10:30:00Z"
+
+
+* type.coding.system = "http://loinc.org"
+* type.coding.code = #34105-7
+* type.coding.display = "Nota de consulta"
+
+* subject = Reference(Patient/PacienteEjemploPy)
+* custodian = Reference(Organization/OrganizacionEjemploPy)
+* author = Reference(Organization/PractitionerEjemploPy)
+* content.attachment.contentType = #application/fhir+json
+* content.attachment.url = "Bundle/BundleDocumentEjemploParaguay"
+
 
