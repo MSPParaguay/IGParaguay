@@ -82,7 +82,7 @@ Description: "Ejemplo de Document Reference."
 
 * subject = Reference(Patient/PacienteEjemploPy)
 * custodian = Reference(Organization/OrganizacionEjemploPy)
-* author = Reference(Organization/PractitionerEjemploPy)
+* author = Reference(PractitionerPy/PractitionerEjemploPy)
 * content.attachment.contentType = #application/fhir+json
 * content.attachment.url = "Bundle/BundleDocumentEjemploParaguay"
 

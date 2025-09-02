@@ -45,8 +45,8 @@ menu:
     "Immunization": StructureDefinition-ImmunizationPy.html
   Perfiles Documentos: 
     "Documento Clínico": StructureDefinition-CompositionPy.html
-    "Indice Documentos": StructureDefinition-DocumentReferencePy.html
     "BundleDocument": StructureDefinition-BundleDocPy.html
+    "Indice Documentos": StructureDefinition-DocumentReferencePy.html   
   Transacciones:
     "Estructura IPS": IPS-PY.html
     "Detalle": Transacciones-PY.html   
