@@ -11,6 +11,7 @@ _En esta sección se describen los perfiles específicos realizados para este co
 `POST <Base del Servidor>`
 
 *   Para registrar un documento IPS, se debe enviar una transacción con los siguientes recursos: 
+    *   LIST --> [link](StructureDefinition-ListPy.html).
     *   DOCUMENT REFERENCE --> [link](StructureDefinition-DocumentReferencePy.html).
     *   BUNDLE-Document --> [link](StructureDefinition-BundleDocPy.html).
     *   PATIENT  --> [link](StructureDefinition-PacientePy.html).

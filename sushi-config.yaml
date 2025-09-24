@@ -46,14 +46,17 @@ menu:
   Perfiles Documentos: 
     "Documento Clínico": StructureDefinition-CompositionPy.html
     "BundleDocument": StructureDefinition-BundleDocPy.html
-    "Indice Documentos": StructureDefinition-DocumentReferencePy.html   
+    "Indice Documentos": StructureDefinition-DocumentReferencePy.html  
   Transacciones:
+    "BundleTransaction": StructureDefinition-BundleTransaccPy.html
+    "List": StructureDefinition-ListPy.html
     "Estructura IPS": IPS-PY.html
     "Detalle": Transacciones-PY.html   
   Resumen: 
     "Versiones": versiones.html
     "Resumen": artifacts.html
     "Descargas": descarga.html
+    "CONECT": infoconect.html
 
 
 

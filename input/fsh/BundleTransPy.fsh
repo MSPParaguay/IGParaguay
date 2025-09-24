@@ -13,10 +13,14 @@ Id: BundleTransaccPy
 
 
 * entry contains
+    List 1..1 and
     DocumentRefs 1..1 and
     FhirDocuments 1..1 and
     Patient 1..1
   
+
+* entry[List].resource 1..1
+* entry[List].resource only ListPy
 
 * entry[DocumentRefs].resource 1..1
 * entry[DocumentRefs].resource only DocumentReferencePy
@@ -42,17 +46,21 @@ Description: "Ejemplo de Bundle de transacción."
 
 * timestamp = "2022-03-03T10:30:00Z"
 
+* entry[List].fullUrl = "urn:uuid:1c3f3b6e-3f4e-4c5a-9e2b-1e8f0c8b9c6d"
+* entry[List].resource = ListEjemploPy2
+* entry[List].request.method = #POST
+* entry[List].request.url = "List"
 
 //DocReference -- CASO AMBI
 * entry[DocumentRefs].fullUrl = "urn:uuid:487b6713-4647-4a9a-914e-7c552d7197e9"
-* entry[DocumentRefs].resource = DocumentReferenceEjemploPy
+* entry[DocumentRefs].resource = DocumentReferenceEjemploPy2
 * entry[DocumentRefs].request.method = #POST
 * entry[DocumentRefs].request.url = "DocumentReference"
 
 
 //Composition
 * entry[FhirDocuments].fullUrl = "urn:uuid:d384326c-7c0f-4ac2-ba90-a1d83e5b548f"
-* entry[FhirDocuments].resource = BundleDocumentEjemploParaguay
+* entry[FhirDocuments].resource = BundleDocumentEjemploParaguay2
 * entry[FhirDocuments].request.method = #POST
 * entry[FhirDocuments].request.url = "Bundle"
 
@@ -62,3 +70,92 @@ Description: "Ejemplo de Bundle de transacción."
 * entry[Patient].resource = PacienteEjemploPy
 * entry[Patient].request.method = #POST
 * entry[Patient].request.url = "Patient"
+
+
+/*****************************************************************/
+/*********************************/
+
+
+Instance: ListEjemploPy2
+InstanceOf: ListPy
+Usage: #example
+Title : "List"
+Description: "Ejemplo de List."
+
+* date = "2025-09-01T10:30:00Z"
+* entry.item.reference = "urn:uuid:487b6713-4647-4a9a-914e-7c552d7197e9"
+* subject.reference = "urn:uuid:05d3374b-0278-4d04-93f7-6adc181d5874"
+* status = #current
+* mode = #working
+
+
+
+Instance: DocumentReferenceEjemploPy2
+InstanceOf: DocumentReferencePy 
+Usage: #example
+Title : "DocumentReference"
+Description: "Ejemplo de Document Reference."
+
+* status = #current 
+* date = "2025-09-01T10:30:00Z"
+
+
+* type.coding.system = "http://loinc.org"
+* type.coding.code = #34105-7
+* type.coding.display = "Nota de consulta"
+
+* subject.reference = "urn:uuid:05d3374b-0278-4d04-93f7-6adc181d5874"
+* custodian = Reference(Organization/OrganizacionEjemploPy)
+* author = Reference(PractitionerPy/PractitionerEjemploPy)
+* content.attachment.contentType = #application/fhir+json
+* content.attachment.url = "urn:uuid:d384326c-7c0f-4ac2-ba90-a1d83e5b548f"
+
+
+
+
+
+Instance : BundleDocumentEjemploParaguay2
+InstanceOf : BundleDocPy
+Title : "Bundle IPS - Paraguay"
+
+Usage : #example
+Description: "Ejemplo de Bundle"
+
+* meta.profile = $canonicaBundle
+* type = #document
+
+* timestamp = "2023-05-01T10:30:00Z"
+* identifier.system = "urn:oid"
+* identifier.value = "28b95815-76ce-457b-b7ae-a972e527db40"
+
+
+* entry[0].fullUrl = "Composition/CompositionEjemploPy"
+* entry[=].resource = CompositionEjemploPy
+
+//Condition
+* entry[+].fullUrl = "Condition/ConditionEjemploParaguay"
+* entry[=].resource = ConditionEjemploParaguay
+
+
+//Alergia-Intolerancia
+* entry[+].fullUrl = "AllergyIntolerance/AlergiaPeruMedicamento"
+* entry[=].resource = AlergiaPeruMedicamento
+
+
+
+//MEdicamentos
+* entry[+].fullUrl = "MedicationStatement/MedicationStatementEjemploParaguay"
+* entry[=].resource = MedicationStatementEjemploParaguay
+
+
+//Patient
+* entry[+].fullUrl = "Patient/PacienteEjemploPy"
+* entry[=].resource = PacienteEjemploPy
+
+//Organization
+//* entry[+].fullUrl = "OrganizacionPe/OrganizacionEstablecimientoEjemplo"
+//* entry[=].resource = OrganizacionEstablecimientoEjemplo
+
+//Profesional -- 
+* entry[+].fullUrl = "Practitioner/PractitionerEjemploPy"
+* entry[=].resource = PractitionerEjemploPy

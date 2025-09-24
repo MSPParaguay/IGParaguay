@@ -159,6 +159,14 @@ Usage: #example
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Diagnósticos</div>"
 * section[=].entry = Reference(Condition/ConditionEjemploParaguay)
 
+/*
+* section[1].title = "Alergias"
+
+* section[=].code = http://loinc.org#11450-4 "Problem list Reported"
+* section[=].text.status = #generated
+* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Alergias</div>"
+* section[=].entry = Reference(Condition/ConditionEjemploParaguay)
+*/
 
 
 /******************************************************************************************************************/
