@@ -1,0 +1,29 @@
+
+/** PUT https://fhir-conectaton.mspbs.gov.py/fhir/Organization/0005000.00010102 
+// 
+//  "custodian": {
+                    "reference": "Organization/0005000.00010102"
+                },
+// 
+// **/
+
+{
+  "resourceType": "Organization",
+  "id": "0005000.00010102",
+  "meta": {
+    "profile": [
+      "https://mspbs.gov.py/fhir/StructureDefinition/OrganizacionPy"
+    ]
+  },
+  "identifier": [
+    {
+      "value": "0005000.00010102"
+    }
+  ],
+  "name": "HOSPITAL GENERAL DE CORONEL OVIEDO",
+  "type": [
+    {
+      "text": "HG"
+    }
+  ]
+}
