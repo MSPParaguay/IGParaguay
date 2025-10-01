@@ -2,7 +2,6 @@
 Profile:        ImmunizationPy
 Parent:         Immunization
 Title:          "Inmunización Paraguay"
-Description:    "Inmunización del paciente"
 
 //---paciente
 * patient only Reference($canonicaPaciente)

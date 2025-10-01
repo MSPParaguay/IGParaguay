@@ -1,0 +1,3 @@
+El Perfil **Organization-PY** se deriva del recurso FHIR Organization. Define los requisitos mínimos para representar la información demográfica y administrativa de prestadores de servicios de salud (hospitales, centros de salud, sanatorios, laboratorios) y direcciones regionales/departamentales en Paraguay.
+
+Este perfil establece los elementos esenciales, las extensiones nacionales, los vocabularios y conjuntos de valores que DEBEN estar presentes en el recurso, y define restricciones para garantizar uniformidad, interoperabilidad y consistencia con los proyectos nacionales (HIS – Proyecto Taiwán, LACPASS-OPS/OMS).

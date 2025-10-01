@@ -1,7 +1,6 @@
 Profile: PacientePy
 Parent:  Patient
 Title: "Paciente Paraguay"
-Description: "En esta sección se presentará un resumen de la información relacionada con el paciente"
 * ^name = "PacientePy"
 
 

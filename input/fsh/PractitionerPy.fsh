@@ -1,7 +1,6 @@
 Profile:        PractitionerPy
 Parent:         Practitioner
 Title:          "Profesional Paraguay"
-Description:    "Profesional de Paraguay."
 * ^name = "ProfesionalPy"
 
 

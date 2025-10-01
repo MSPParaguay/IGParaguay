@@ -1,7 +1,6 @@
 Profile:        ConditionPy
 Parent:         Condition
 Title:          "Condition_Paraguay"
-Description:    "Condicion del paciente"
 * ^name = "ConditionPy"
 
 //---paciente

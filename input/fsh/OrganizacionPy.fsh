@@ -1,7 +1,6 @@
 Profile:        OrganizacionPy
 Parent:         Organization
 Title:          "Organizacion Paraguay"
-Description:    "Organización de Salud, Establecimiento de Paraguay."
 * ^name = "OrganizacionPy"
 
 * identifier 1.. MS

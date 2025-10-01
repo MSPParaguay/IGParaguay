@@ -9,7 +9,6 @@ Alias: $allergy-reaction-snomed-ct-ips-free-set = http://hl7.org/fhir/uv/ips/Val
 Profile:        AlergiaPy
 Parent:         AllergyIntolerance
 Title:          "Alergias/Intolerancia Paraguay"
-Description:    "Alergias del paciente"
 
 //---paciente
 * patient only Reference($canonicaPaciente)

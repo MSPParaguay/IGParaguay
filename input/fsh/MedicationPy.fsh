@@ -1,7 +1,6 @@
 Profile:        MedicationStatementPy
 Parent:         MedicationStatement
 Title:          "Medication Paraguay"
-Description:    "Medicación del paciente"
 * ^name = "MedicationStatementPy"
 
 //---paciente

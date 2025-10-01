@@ -1,0 +1,4 @@
+El Perfil **Medicamento-PY** se deriva del recurso FHIR MedicationStatement.  
+Define los requisitos mínimos para representar la información de los medicamentos prescritos y administrados a un paciente durante la prestación de servicios de salud en Paraguay.
+
+El perfil establece los elementos obligatorios, las extensiones nacionales, los vocabularios y conjuntos de valores que DEBEN estar presentes en el recurso, y limita el uso de ciertos elementos para garantizar consistencia, precisión e interoperabilidad en los registros de medicamentos utilizados en atención ambulatoria, urgencias y hospitalización.
