@@ -80,7 +80,7 @@ Instance: ListEjemploPy2
 InstanceOf: ListPy
 Usage: #example
 Title : "List"
-Description: "Ejemplo de List."
+Description: "Ejemplo de List 2."
 
 * date = "2025-09-01T10:30:00Z"
 * entry.item.reference = "urn:uuid:487b6713-4647-4a9a-914e-7c552d7197e9"
@@ -94,7 +94,7 @@ Instance: DocumentReferenceEjemploPy2
 InstanceOf: DocumentReferencePy 
 Usage: #example
 Title : "DocumentReference"
-Description: "Ejemplo de Document Reference."
+Description: "Ejemplo de Document Reference 2."
 
 * status = #current 
 * date = "2025-09-01T10:30:00Z"
@@ -117,9 +117,9 @@ Description: "Ejemplo de Document Reference."
 Instance : BundleDocumentEjemploParaguay2
 InstanceOf : BundleDocPy
 Title : "Bundle IPS - Paraguay"
-
+Description: "Ejemplo de Bundle-Document 2."
 Usage : #example
-Description: "Ejemplo de Bundle"
+
 
 * meta.profile = $canonicaBundle
 * type = #document

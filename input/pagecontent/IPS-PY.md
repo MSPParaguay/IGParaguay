@@ -1,6 +1,6 @@
 ### **Introducción**
 
-## En esta página, se documenta todos los recursos involucrados para representar la información de un resumen de atención.
+En esta página, se documenta todos los recursos involucrados para representar la información de un resumen de atención.
 
 ### **Perfiles**
 

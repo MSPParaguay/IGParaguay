@@ -39,8 +39,7 @@ menu:
     "Organización": StructureDefinition-OrganizacionPy.html
   Perfiles Información Clínica:
     "Condition": StructureDefinition-ConditionPy.html
-    "MedicationStatement": StructureDefinition-MedicationStatementPy.html
-    #"MedicationAdministration": StructureDefinition-MedicationAdministrationPy.html
+    "MedicationStatement": StructureDefinition-MedicationStatementPy.html   
     "AllergyIntolerance": StructureDefinition-AlergiaPy.html
     "Immunization": StructureDefinition-ImmunizationPy.html
   Perfiles Documentos: 
@@ -56,7 +55,6 @@ menu:
     "Versiones": versiones.html
     "Resumen": artifacts.html
     "Descargas": descarga.html
-    "CONECT": infoconect.html
 
 
 
