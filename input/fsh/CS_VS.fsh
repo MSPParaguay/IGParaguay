@@ -31,3 +31,14 @@ Description:  "Conjunto de valores para los Identificadores de Profesional."
 * ^status = #active
 
 * $CSIdentificadoresPersona#01 "Cédula de Identidad" 
+
+/*************************************************************************************/
+ValueSet: CIE10VS
+Id: CIE10VS
+Title: "Codificacion CIE10 ValueSet"
+Description:  "Conjunto de Valores de Codificacion CIE10"
+* ^experimental = false
+* ^version = "1.0.0"
+* ^status = #active
+
+* include codes from system http://hl7.org/fhir/sid/icd-10
