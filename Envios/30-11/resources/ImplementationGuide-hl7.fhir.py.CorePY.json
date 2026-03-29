@@ -1,0 +1,369 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "hl7.fhir.py.CorePY",
+  "url": "https://mspbs.gov.py/fhir/ImplementationGuide/hl7.fhir.py.CorePY",
+  "version": "0.1",
+  "name": "CorePYImplementationGuide",
+  "title": "Interoperabilidad de Historia Clínica - PARAGUAY",
+  "status": "draft",
+  "publisher": "MSP PARAGUAY",
+  "contact": [
+    {
+      "name": "MSP PARAGUAY",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://mspbs.gov.py"
+        }
+      ]
+    }
+  ],
+  "description": "Ministerio de Salud , PARAGUAY - Interoperabilidad de Historia Clínica IHC -",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "PY",
+          "system": "urn:iso:std:iso:3166"
+        }
+      ]
+    }
+  ],
+  "packageId": "hl7.fhir.py.CorePY",
+  "license": "CC0-1.0",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "dependsOn": [
+    {
+      "packageId": "hl7.fhir.uv.ips",
+      "version": "1.1.0",
+      "uri": "http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips",
+      "id": "hl7_fhir_uv_ips"
+    },
+    {
+      "packageId": "ihe.iti.mhd",
+      "version": "4.2.2",
+      "uri": "https://profiles.ihe.net/ITI/MHD/ImplementationGuide/ihe.iti.mhd",
+      "id": "ihe_iti_mhd"
+    }
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "AllergyIntolerance/AlergiaPeruMedicamento"
+        },
+        "name": "AlergiaPeruMedicamento",
+        "description": "Ejemplo Alergia a Medicamento.",
+        "exampleCanonical": "https://mspbs.gov.py/fhir/StructureDefinition/AlergiaPy"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/AlergiaPy"
+        },
+        "name": "Alergias/Intolerancia Paraguay",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Bundle/BundleDocumentEjemploParaguay"
+        },
+        "name": "Bundle IPS - Paraguay",
+        "description": "Ejemplo de Bundle",
+        "exampleCanonical": "https://mspbs.gov.py/fhir/StructureDefinition/BundleDocPy"
+      },
+      {
+        "reference": {
+          "reference": "Bundle/BundleDocumentEjemploParaguay2"
+        },
+        "name": "Bundle IPS - Paraguay",
+        "description": "Ejemplo de Bundle-Document 2.",
+        "exampleCanonical": "https://mspbs.gov.py/fhir/StructureDefinition/BundleDocPy"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/BundleDocPy"
+        },
+        "name": "Bundle Paraguay",
+        "description": "Estructura de Documentos y recursos relacionados.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Bundle/BundleTrancEjemploPy"
+        },
+        "name": "Bundle Transaccional Paraguay",
+        "description": "Ejemplo de Bundle de transacción.",
+        "exampleCanonical": "https://mspbs.gov.py/fhir/StructureDefinition/BundleTransaccPy"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/BundleTransaccPy"
+        },
+        "name": "BundleTransaccPy",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/CIE10ParaguayCS"
+        },
+        "name": "CIE-10 Paraguay",
+        "description": "Códigos de la Clasificación Internacional de Enfermedades (CIE-10) con descripciones en español para Paraguay",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/CIE10VS"
+        },
+        "name": "Codificación CIE-10 ValueSet",
+        "description": "Conjunto de Valores de Codificación CIE-10 en español para Paraguay",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Condition/ConditionEjemploParaguay"
+        },
+        "name": "ConditionEjemploParaguay",
+        "description": "Ejemplo de Condición/Antecedente de Paciente.",
+        "exampleCanonical": "https://mspbs.gov.py/fhir/StructureDefinition/ConditionPy"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ConditionPy"
+        },
+        "name": "Condition_Paraguay",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/CompositionPy"
+        },
+        "name": "Documento Clinico Paraguay",
+        "description": "Información Clinica Basica Paraguay",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "DocumentReference/DocumentReferenceEjemploPy2"
+        },
+        "name": "DocumentReference",
+        "description": "Ejemplo de Document Reference 2.",
+        "exampleCanonical": "https://mspbs.gov.py/fhir/StructureDefinition/DocumentReferencePy"
+      },
+      {
+        "reference": {
+          "reference": "DocumentReference/DocumentReferenceEjemploPy"
+        },
+        "name": "DocumentReference",
+        "description": "Ejemplo de Document Reference.",
+        "exampleCanonical": "https://mspbs.gov.py/fhir/StructureDefinition/DocumentReferencePy"
+      },
+      {
+        "reference": {
+          "reference": "Composition/CompositionEjemploPy"
+        },
+        "name": "Ejemplo de Documento Clinico Paraguay",
+        "description": "Ejemplo de Documento-Composition.",
+        "exampleCanonical": "https://mspbs.gov.py/fhir/StructureDefinition/CompositionPy"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/icd-10-ES"
+        },
+        "name": "ICD-10 Core (Flat + String Properties)",
+        "description": "ICD-10 codes as a flat set with string properties. Includes all rows with hierarchyLevel 0–3.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/IdentificadoresPersonaVS"
+        },
+        "name": "Identificadores de Persona",
+        "description": "Conjunto de valores para los Identificadores de Persona.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/IdentificadoresPersonaCS"
+        },
+        "name": "Identificadores de Persona",
+        "description": "Conjunto de códigos para identificar a una persona.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/IdentificadoresProfesionalVS"
+        },
+        "name": "Identificadores de Profesional",
+        "description": "Conjunto de valores para los Identificadores de Profesional.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ImmunizationPy"
+        },
+        "name": "Inmunización Paraguay",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "List/ListEjemploPy2"
+        },
+        "name": "List",
+        "description": "Ejemplo de List 2.",
+        "exampleCanonical": "https://mspbs.gov.py/fhir/StructureDefinition/ListPy"
+      },
+      {
+        "reference": {
+          "reference": "List/ListEjemploPy"
+        },
+        "name": "List",
+        "description": "Ejemplo de List.",
+        "exampleCanonical": "https://mspbs.gov.py/fhir/StructureDefinition/ListPy"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ListPy"
+        },
+        "name": "ListPy",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/MedicationStatementPy"
+        },
+        "name": "Medication Paraguay",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "MedicationStatement/MedicationStatementEjemploParaguay"
+        },
+        "name": "MedicationStatementEjemploParaguay",
+        "description": "Ejemplo de MedicationStatement/MedicaciónPaciente.",
+        "exampleCanonical": "https://mspbs.gov.py/fhir/StructureDefinition/MedicationStatementPy"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/OrganizacionPy"
+        },
+        "name": "Organizacion Paraguay",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Organization/OrganizacionEjemploPy"
+        },
+        "name": "OrganizacionEjemploPy",
+        "description": "Ejemplo de Organización de Salud.",
+        "exampleCanonical": "https://mspbs.gov.py/fhir/StructureDefinition/OrganizacionPy"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/PacientePy"
+        },
+        "name": "Paciente Paraguay",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Patient/PacienteEjemploPy"
+        },
+        "name": "PacienteEjemploPy",
+        "description": "Ejemplo de Paciente.",
+        "exampleCanonical": "https://mspbs.gov.py/fhir/StructureDefinition/PacientePy"
+      },
+      {
+        "reference": {
+          "reference": "Practitioner/PractitionerEjemploPy"
+        },
+        "name": "PractitionerEjemploPy",
+        "description": "Ejemplo de Profesional.",
+        "exampleCanonical": "https://mspbs.gov.py/fhir/StructureDefinition/PractitionerPy"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/PractitionerPy"
+        },
+        "name": "Profesional Paraguay",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/DocumentReferencePy"
+        },
+        "name": "Referencia de Documentos",
+        "description": "Documento utilizado para guardar referencias.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/VSCie10ES"
+        },
+        "name": "VS Cie10 ES",
+        "description": "ValueSet CIE10-es.",
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "descarga.html",
+          "title": "Descarga",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "infoconect.html",
+          "title": "Infoconect",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "IPS-PY.html",
+          "title": "IPS PY",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "Transacciones-PY.html",
+          "title": "Transacciones PY",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "versiones.html",
+          "title": "Versiones",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2023+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "ci-build"
+      },
+      {
+        "code": "apply-publisher",
+        "value": "true"
+      },
+      {
+        "code": "apply-contact",
+        "value": "true"
+      },
+      {
+        "code": "show-inherited-invariants",
+        "value": "false"
+      }
+    ]
+  }
+}

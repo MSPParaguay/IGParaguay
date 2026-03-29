@@ -1,0 +1,31 @@
+{
+  "resourceType": "Practitioner",
+  "id": "PractitionerEjemploPy",
+  "meta": {
+    "profile": [
+      "https://mspbs.gov.py/fhir/StructureDefinition/PractitionerPy"
+    ]
+  },
+  "name": [
+    {
+      "family": "Doe",
+      "given": [
+        "John"
+      ]
+    }
+  ],
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "https://mspbs.gov.py/fhir/CodeSystem/IdentificadoresProfesionalCS",
+            "code": "01",
+            "display": "Cédula de Identidad"
+          }
+        ]
+      },
+      "value": "5555555"
+    }
+  ]
+}

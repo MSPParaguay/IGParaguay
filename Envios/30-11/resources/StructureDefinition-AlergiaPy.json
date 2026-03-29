@@ -1,0 +1,94 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "AlergiaPy",
+  "url": "https://mspbs.gov.py/fhir/StructureDefinition/AlergiaPy",
+  "name": "AlergiaPy",
+  "title": "Alergias/Intolerancia Paraguay",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "AllergyIntolerance",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "AllergyIntolerance.category",
+        "path": "AllergyIntolerance.category",
+        "short": "food (comida) | medication (medicación) | environment (medio ambiente) | biologic (biológico)",
+        "definition": "Categoría de la alergia o intolerancia detectada.",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "AllergyIntolerance.criticality",
+        "path": "AllergyIntolerance.criticality",
+        "short": "low (baja) | high (alta) | unable-to-assess (incapaz de evaluar)",
+        "definition": "Grado de criticidad.",
+        "mustSupport": true
+      },
+      {
+        "id": "AllergyIntolerance.code.coding.system",
+        "path": "AllergyIntolerance.code.coding.system",
+        "min": 1,
+        "patternUri": "http://hl7.org/fhir/sid/icd-10"
+      },
+      {
+        "id": "AllergyIntolerance.code.coding.code",
+        "path": "AllergyIntolerance.code.coding.code",
+        "min": 1,
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "https://mspbs.gov.py/fhir/ValueSet/CIE10VS"
+        }
+      },
+      {
+        "id": "AllergyIntolerance.code.coding.display",
+        "path": "AllergyIntolerance.code.coding.display",
+        "min": 1
+      },
+      {
+        "id": "AllergyIntolerance.code.text",
+        "path": "AllergyIntolerance.code.text",
+        "short": "Descripción de la alergia o intolerancia.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "AllergyIntolerance.patient",
+        "path": "AllergyIntolerance.patient",
+        "short": "Paciente sobre al que corresponde la alergia.",
+        "definition": "Paciente sobre al que corresponde la alergia.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://mspbs.gov.py/fhir/StructureDefinition/PacientePy"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "AllergyIntolerance.patient.reference",
+        "path": "AllergyIntolerance.patient.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "AllergyIntolerance.reaction",
+        "path": "AllergyIntolerance.reaction",
+        "short": "Reacción adversa.",
+        "mustSupport": true
+      },
+      {
+        "id": "AllergyIntolerance.reaction.description",
+        "path": "AllergyIntolerance.reaction.description",
+        "short": "Descripción de la reacción adversa.",
+        "mustSupport": true
+      }
+    ]
+  }
+}

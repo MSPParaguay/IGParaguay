@@ -1,0 +1,73 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "PractitionerPy",
+  "url": "https://mspbs.gov.py/fhir/StructureDefinition/PractitionerPy",
+  "name": "ProfesionalPy",
+  "title": "Profesional Paraguay",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Practitioner",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Practitioner",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Practitioner.identifier",
+        "path": "Practitioner.identifier",
+        "short": "Identificación del profesional.",
+        "definition": "Elemento de dato que contiene el nombre y número de identificación de una determinada persona \r\npara efectos de identidad e individualización.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.identifier.type",
+        "path": "Practitioner.identifier.type",
+        "short": "Tipo de indentificación.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.identifier.type.coding",
+        "path": "Practitioner.identifier.type.coding",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.identifier.type.coding.code",
+        "path": "Practitioner.identifier.type.coding.code",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://mspbs.gov.py/fhir/ValueSet/IdentificadoresProfesionalVS"
+        }
+      },
+      {
+        "id": "Practitioner.identifier.value",
+        "path": "Practitioner.identifier.value",
+        "short": "Número que indica la identificación.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.name",
+        "path": "Practitioner.name",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.name.family",
+        "path": "Practitioner.name.family",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.name.given",
+        "path": "Practitioner.name.given",
+        "mustSupport": true
+      }
+    ]
+  }
+}

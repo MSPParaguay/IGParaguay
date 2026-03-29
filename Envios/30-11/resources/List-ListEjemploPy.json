@@ -1,0 +1,22 @@
+{
+  "resourceType": "List",
+  "id": "ListEjemploPy",
+  "meta": {
+    "profile": [
+      "https://mspbs.gov.py/fhir/StructureDefinition/ListPy"
+    ]
+  },
+  "status": "current",
+  "mode": "working",
+  "date": "2025-09-01T10:30:00Z",
+  "entry": [
+    {
+      "item": {
+        "reference": "DocumentReference/DocumentReferenceEjemploPy"
+      }
+    }
+  ],
+  "subject": {
+    "reference": "Patient/PacienteEjemploPy"
+  }
+}

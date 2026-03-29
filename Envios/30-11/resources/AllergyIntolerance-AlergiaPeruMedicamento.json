@@ -1,0 +1,40 @@
+{
+  "resourceType": "AllergyIntolerance",
+  "id": "AlergiaPeruMedicamento",
+  "meta": {
+    "profile": [
+      "https://mspbs.gov.py/fhir/StructureDefinition/AlergiaPy"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10",
+        "code": "T36.0X5",
+        "display": "alergia a penicilina"
+      }
+    ],
+    "text": "alergia a penicilina"
+  },
+  "clinicalStatus": {
+    "coding": [
+      {
+        "code": "active"
+      }
+    ]
+  },
+  "verificationStatus": {
+    "coding": [
+      {
+        "code": "confirmed"
+      }
+    ]
+  },
+  "patient": {
+    "reference": "Patient/PacienteEjemploParaguay",
+    "display": "Paciente Ejemplo"
+  },
+  "category": [
+    "medication"
+  ]
+}

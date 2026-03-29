@@ -22,4 +22,3 @@ En este apartado se describen las diferentes secciones incluidas en el documento
 | ✅ **Antecedentes Diagnósiticos** | [Condition](StructureDefinition-ConditionPy.html) | Representa los antecedentedes diagnósticos del paciente. |
 | ✅ **Medicación Actual** | [Medication Statement](StructureDefinition-MedicationStatementPy.html). | Representa la información de la medicación actual que toma el paciente. |
 | ✅ **Alergias Conocidas** | [Alergias](StructureDefinition-AlergiaPy.html). | Representa las alergias que tiene el paciente. |
-| ✅ **Inmunizaciones** | [En proceso --> Inmunizaciones](StructureDefinition-ImmunizationPy.html). | Representa las inmunizaciones que tiene el paciente. |

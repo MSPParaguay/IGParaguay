@@ -1,0 +1,112 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "DocumentReferencePy",
+  "url": "https://mspbs.gov.py/fhir/StructureDefinition/DocumentReferencePy",
+  "name": "DocumentReferencePy",
+  "title": "Referencia de Documentos",
+  "status": "draft",
+  "description": "Documento utilizado para guardar referencias.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "DocumentReference",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DocumentReference.status",
+        "path": "DocumentReference.status",
+        "short": "Estado del Documento. Valor Fijo: current",
+        "definition": "Indica el estado del documento.",
+        "patternCode": "current",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.type",
+        "path": "DocumentReference.type",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.subject",
+        "path": "DocumentReference.subject",
+        "short": "Representa al paciente.",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://mspbs.gov.py/fhir/StructureDefinition/PacientePy"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.subject.reference",
+        "path": "DocumentReference.subject.reference",
+        "short": "URL que referencia al recurso paciente.",
+        "min": 1
+      },
+      {
+        "id": "DocumentReference.date",
+        "path": "DocumentReference.date",
+        "short": "Fecha de creación del documento",
+        "definition": "Fecha de creación del documento",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.author",
+        "path": "DocumentReference.author",
+        "short": "Autor del documento.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://mspbs.gov.py/fhir/StructureDefinition/PractitionerPy"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.author.reference",
+        "path": "DocumentReference.author.reference",
+        "short": "URL que indica el autor.",
+        "min": 1
+      },
+      {
+        "id": "DocumentReference.custodian",
+        "path": "DocumentReference.custodian",
+        "short": "Establecimiento de salud que custodia el documento.",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://mspbs.gov.py/fhir/StructureDefinition/OrganizacionPy"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content.attachment",
+        "path": "DocumentReference.content.attachment",
+        "short": "",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content.attachment.url",
+        "path": "DocumentReference.content.attachment.url",
+        "short": "Se debe completar URL del Bundle-Document, enviado dentro de la transacción.",
+        "min": 1,
+        "mustSupport": true
+      }
+    ]
+  }
+}

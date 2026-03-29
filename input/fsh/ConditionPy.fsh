@@ -43,12 +43,12 @@ Description: "Ejemplo de Condición/Antecedente de Paciente."
 
 * subject = Reference(Patient/PacienteEjemploPy)
 
-* code = http://hl7.org/fhir/sid/icd-10#E10.4 "Type 1 diabetes mellitus : With neurological complications"
+/** code = http://hl7.org/fhir/sid/icd-10#E10.4 "Type 1 diabetes mellitus : With neurological complications"
 
 * code.text = "Diabetes Tipo 1, con complicaciones neurologicas"
 * code.coding.code = #E10.4 
 * code.coding.system = "http://hl7.org/fhir/sid/icd-10"
-* code.coding.display = "Type 1 diabetes mellitus : With neurological complications"
+* code.coding.display = "Type 1 diabetes mellitus : With neurological complications"*/
 
 * verificationStatus = $condition-ver-status#confirmed
 * onsetPeriod.start =   "2023-01-13"

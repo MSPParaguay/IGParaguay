@@ -147,7 +147,21 @@ Usage: #example
 * subject = Reference(Patient/PacienteEjemploPy)
 * author = Reference(Practitioner/PractitionerEjemploPy)
 * custodian = Reference(Organization/OrganizacionEjemploPy)
+* status = #final
+* title = "Resumen Digital en Atención - Ejemplo Paraguay"
 * date = "2025-09-01"
+
+* section[sectionDiagnosticos].code = $loinc#11450-4
+* section[sectionDiagnosticos].title = "Diagnósticos"
+* section[sectionDiagnosticos].entry = Reference(Condition/ConditionEjemploParaguay)
+
+* section[sectionMedicacion].code = $loinc#10160-0
+* section[sectionMedicacion].title = "Medicación Actual"
+* section[sectionMedicacion].entry = Reference(MedicationStatement/MedicationStatementEjemploParaguay)
+
+* section[sectionAlergias].code = $loinc#48765-2
+* section[sectionAlergias].title = "Alergias Conocidas"
+* section[sectionAlergias].entry = Reference(AllergyIntolerance/AlergiaPeruMedicamento)
 * title = "Ejemplo de Documento Clinico Paraguay"
 * status = #final
 

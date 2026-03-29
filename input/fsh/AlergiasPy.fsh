@@ -8,8 +8,8 @@ Alias: $allergy-reaction-snomed-ct-ips-free-set = http://hl7.org/fhir/uv/ips/Val
 
 Profile:        AlergiaPy
 Parent:         AllergyIntolerance
-Title:          "Alergias/Intolerancia Paraguay"
-
+Title:          "Alergias-Intolerancia Paraguay"
+Description:    "Perfil para representar alergias e intolerancias en el contexto de Paraguay, incluyendo información sobre el paciente, categoría de la alergia, criticidad y detalles de las reacciones adversas."
 //---paciente
 * patient only Reference($canonicaPaciente)
 * patient MS
@@ -35,7 +35,7 @@ Title:          "Alergias/Intolerancia Paraguay"
 * code.text 1..1 MS 
 * code.text ^short = "Descripción de la alergia o intolerancia."
 
-/*IPS */
+/*IPS 
 
 * code.text 1..1 MS
 * code.coding.code 1..1
@@ -44,11 +44,12 @@ Title:          "Alergias/Intolerancia Paraguay"
 * code.coding.system = "http://hl7.org/fhir/sid/icd-10"
 * code.coding.display 1..1
 
+*/
 
 /************************************************************************************/
 
 
-Instance: AlergiaPeruMedicamento
+Instance: AlergiaParaguayMedicamento
 InstanceOf: AlergiaPy
 Usage: #example
 Description: "Ejemplo Alergia a Medicamento."
@@ -60,5 +61,5 @@ Description: "Ejemplo Alergia a Medicamento."
 * code.coding.system = "http://hl7.org/fhir/sid/icd-10"
 * code.text = "alergia a penicilina"
 * code.coding.display = "alergia a penicilina"
-* patient =  Reference(Patient/PacienteEjemploParaguay) "Paciente Ejemplo"
+* patient =  Reference(Patient/PacienteEjemploPy) "Paciente Ejemplo"
 * category = #medication

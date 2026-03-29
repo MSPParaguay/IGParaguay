@@ -1,0 +1,20 @@
+{
+  "resourceType": "Organization",
+  "id": "OrganizacionEjemploPy",
+  "meta": {
+    "profile": [
+      "https://mspbs.gov.py/fhir/StructureDefinition/OrganizacionPy"
+    ]
+  },
+  "identifier": [
+    {
+      "value": "0005000.00010102"
+    }
+  ],
+  "name": "HOSPITAL GENERAL DE CORONEL OVIEDO",
+  "type": [
+    {
+      "text": "HG"
+    }
+  ]
+}

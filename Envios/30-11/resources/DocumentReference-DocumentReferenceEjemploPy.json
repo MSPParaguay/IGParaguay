@@ -1,0 +1,39 @@
+{
+  "resourceType": "DocumentReference",
+  "id": "DocumentReferenceEjemploPy",
+  "meta": {
+    "profile": [
+      "https://mspbs.gov.py/fhir/StructureDefinition/DocumentReferencePy"
+    ]
+  },
+  "status": "current",
+  "date": "2025-09-01T10:30:00Z",
+  "type": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "34105-7",
+        "display": "Nota de consulta"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/PacienteEjemploPy"
+  },
+  "custodian": {
+    "reference": "Organization/OrganizacionEjemploPy"
+  },
+  "author": [
+    {
+      "reference": "PractitionerPy/PractitionerEjemploPy"
+    }
+  ],
+  "content": [
+    {
+      "attachment": {
+        "contentType": "application/fhir+json",
+        "url": "Bundle/BundleDocumentEjemploParaguay"
+      }
+    }
+  ]
+}

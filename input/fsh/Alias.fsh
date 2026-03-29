@@ -20,6 +20,6 @@ Alias: $canonicaCondition = https://mspbs.gov.py/fhir/StructureDefinition/Condit
 Alias: $canonicaComposition = https://mspbs.gov.py/fhir/StructureDefinition/CompositionPy
 Alias: $canonicaBundle = https://mspbs.gov.py/fhir/StructureDefinition/BundlePy
 
-
-Alias: $CIE10VS = https://mspbs.gov.py/fhir/ValueSet/CIE10VS
+Alias: $CIE10VS = https://mspbs.gov.py/fhir/ValueSet/CIE10VSES
+// Alias: $CIE10VS = https://mspbs.gov.py/fhir/ValueSet/CIE10VS CIE10VSES
 Alias: $CSIdentificadoresProfesional = https://mspbs.gov.py/fhir/CodeSystem/IdentificadoresProfesionalCS

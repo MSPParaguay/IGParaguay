@@ -1,0 +1,22 @@
+{
+  "resourceType": "List",
+  "id": "ListEjemploPy2",
+  "meta": {
+    "profile": [
+      "https://mspbs.gov.py/fhir/StructureDefinition/ListPy"
+    ]
+  },
+  "status": "current",
+  "mode": "working",
+  "date": "2025-09-01T10:30:00Z",
+  "entry": [
+    {
+      "item": {
+        "reference": "urn:uuid:487b6713-4647-4a9a-914e-7c552d7197e9"
+      }
+    }
+  ],
+  "subject": {
+    "reference": "urn:uuid:05d3374b-0278-4d04-93f7-6adc181d5874"
+  }
+}

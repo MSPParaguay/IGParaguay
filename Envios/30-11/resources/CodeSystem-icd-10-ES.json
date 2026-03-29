@@ -1,0 +1,189 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "ICD10Core",
+  "id": "icd-10-ES",
+  "title": "ICD-10 Core (Flat + String Properties)",
+  "description": "ICD-10 codes as a flat set with string properties. Includes all rows with hierarchyLevel 0–3.",
+  "url": "http://hl7.org/fhir/sid/icd-10-es",
+  "concept": [
+    {
+      "code": "00",
+      "display": "RAÍZ DE LA TERMINOLOGÍA/CLASIFICACIÓN",
+      "property": [
+        {
+          "code": "hierarchyLevel",
+          "valueString": "0"
+        },
+        {
+          "code": "letter",
+          "valueString": "00"
+        },
+        {
+          "code": "enabled",
+          "valueString": "active"
+        },
+        {
+          "code": "chapterId",
+          "valueString": "CH-00"
+        }
+      ]
+    },
+    {
+      "code": "01",
+      "display": "01. Ciertas enfermedades infecciosas y parasitarias (A00-B99)",
+      "property": [
+        {
+          "code": "hierarchyLevel",
+          "valueString": "1"
+        },
+        {
+          "code": "letter",
+          "valueString": "01"
+        },
+        {
+          "code": "enabled",
+          "valueString": "active"
+        },
+        {
+          "code": "chapterId",
+          "valueString": "CH-01"
+        },
+        {
+          "code": "chapter",
+          "valueString": "ROOT"
+        },
+        {
+          "code": "parentId",
+          "valueString": "00"
+        }
+      ]
+    },
+    {
+      "code": "02",
+      "display": "02. Neoplasias (C00-D48)",
+      "property": [
+        {
+          "code": "hierarchyLevel",
+          "valueString": "1"
+        },
+        {
+          "code": "letter",
+          "valueString": "02"
+        },
+        {
+          "code": "enabled",
+          "valueString": "active"
+        },
+        {
+          "code": "chapterId",
+          "valueString": "CH-02"
+        },
+        {
+          "code": "chapter",
+          "valueString": "ROOT"
+        },
+        {
+          "code": "parentId",
+          "valueString": "00"
+        }
+      ]
+    },
+    {
+      "code": "03",
+      "display": "03. Enfermedades de la sangre y de los órganos hematopoyéticos y otros trastornos que afectan el mecanismo de la inmunidad (D50-D89)",
+      "property": [
+        {
+          "code": "hierarchyLevel",
+          "valueString": "1"
+        },
+        {
+          "code": "letter",
+          "valueString": "03"
+        },
+        {
+          "code": "enabled",
+          "valueString": "active"
+        },
+        {
+          "code": "chapterId",
+          "valueString": "CH-03"
+        },
+        {
+          "code": "chapter",
+          "valueString": "ROOT"
+        },
+        {
+          "code": "parentId",
+          "valueString": "00"
+        }
+      ]
+    },
+    {
+      "code": "04",
+      "display": "04. Enfermedades endocrinas, nutricionales y metabólicas (E00-E90)",
+      "property": [
+        {
+          "code": "hierarchyLevel",
+          "valueString": "1"
+        },
+        {
+          "code": "letter",
+          "valueString": "04"
+        },
+        {
+          "code": "enabled",
+          "valueString": "active"
+        },
+        {
+          "code": "chapterId",
+          "valueString": "CH-04"
+        },
+        {
+          "code": "chapter",
+          "valueString": "ROOT"
+        },
+        {
+          "code": "parentId",
+          "valueString": "00"
+        }
+      ]
+    }
+  ],
+  "version": "2025-11",
+  "date": "2025-11-07T04:04:47Z",
+  "property": [
+    {
+      "code": "hierarchyLevel",
+      "type": "string",
+      "description": "Hierarchy level from sheet (as string)"
+    },
+    {
+      "code": "letter",
+      "type": "string",
+      "description": "Initial letter of the code"
+    },
+    {
+      "code": "enabled",
+      "type": "string",
+      "description": "Enabled flag from sheet (string)"
+    },
+    {
+      "code": "chapterId",
+      "type": "string",
+      "description": "Chapter identifier"
+    },
+    {
+      "code": "chapter",
+      "type": "string",
+      "description": "Chapter range (e.g., A00-B99)"
+    },
+    {
+      "code": "parentId",
+      "type": "string",
+      "description": "Parent identifier"
+    }
+  ],
+  "count": 5
+}

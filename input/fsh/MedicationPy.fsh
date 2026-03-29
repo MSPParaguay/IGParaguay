@@ -30,13 +30,11 @@ Title:          "Medication Paraguay"
 
 
 Instance: MedicationStatementEjemploParaguay
-InstanceOf: MedicationStatement
+InstanceOf: MedicationStatementPy
 Usage: #example
 Description: "Ejemplo de MedicationStatement/MedicaciónPaciente."
 
-* meta.profile = $canonicaMedication
-
-* subject = Reference(Patient/PacienteEjemploParaguay)
+* subject = Reference(Patient/PacienteEjemploPy)
 * status = #active
 
 * medicationCodeableConcept.text = "Paracetamol"

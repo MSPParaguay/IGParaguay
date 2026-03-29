@@ -17,17 +17,20 @@ description: Ministerio de Salud , PARAGUAY - Interoperabilidad de Historia Clí
 jurisdiction: urn:iso:std:iso:3166#PY
 license: CC0-1.0
 fhirVersion: 4.0.1
+
 parameters:
   apply-publisher: true
   apply-contact: true
   show-inherited-invariants: false
+  excludettl: true
+  excludexml: true
+  excludemap: true
 copyrightYear: 2023+
 releaseLabel: ci-build
 
 dependencies:
   hl7.fhir.uv.ips: 1.1.0
   ihe.iti.mhd: 4.2.2
-  # fhir.who.ddcc: current
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below..             │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
@@ -40,19 +43,19 @@ menu:
   Perfiles Información Clínica:
     "Condition": StructureDefinition-ConditionPy.html
     "MedicationStatement": StructureDefinition-MedicationStatementPy.html   
-    "AllergyIntolerance": StructureDefinition-AlergiaPy.html
-    "Immunization": StructureDefinition-ImmunizationPy.html
+    "AllergyIntolerance": StructureDefinition-AlergiaPy.html   
   Perfiles Documentos: 
     "Documento Clínico": StructureDefinition-CompositionPy.html
-    "BundleDocument": StructureDefinition-BundleDocPy.html
-    "Indice Documentos": StructureDefinition-DocumentReferencePy.html  
+    "BundleDocument": StructureDefinition-BundleDocPy.html    
+    "IPS-PY": IPS-PY.html  
   Transacciones:
-    "BundleTransaction": StructureDefinition-BundleTransaccPy.html
-    "List": StructureDefinition-ListPy.html
-    "Estructura IPS": IPS-PY.html
-    "Detalle": Transacciones-PY.html   
+    "Indice Documentos": StructureDefinition-DocumentReferencePy.html
+    "List": StructureDefinition-ListPy.html  
+    "BundleTransaction": StructureDefinition-BundleTransaccPy.html 
+    "Detalle": Transacciones-PY.html
+  Terminología:
+    "CIE10": Terminologia.html
   Resumen: 
-    "Versiones": versiones.html
     "Resumen": artifacts.html
     "Descargas": descarga.html
 

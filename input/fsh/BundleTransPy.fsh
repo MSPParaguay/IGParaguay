@@ -2,6 +2,8 @@ Profile: BundleTransaccPy
 //Parent: https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.ProvideBundle
 Parent: Bundle
 Id: BundleTransaccPy
+Description:    "Perfil para representar un Bundle de transacción en el contexto de Paraguay, incluyendo información sobre el tipo de transacción, timestamp y entradas correspondientes a recursos como List, DocumentReference, Composition, Condition, AllergyIntolerance, MedicationStatement, Patient, Organization y Practitioner."
+Title: "Bundle Transaccional Paraguay"
 
 //------Entradas
 * entry MS
@@ -138,8 +140,8 @@ Usage : #example
 
 
 //Alergia-Intolerancia
-* entry[+].fullUrl = "AllergyIntolerance/AlergiaPeruMedicamento"
-* entry[=].resource = AlergiaPeruMedicamento
+* entry[+].fullUrl = "AllergyIntolerance/AlergiaParaguayMedicamento"
+* entry[=].resource = AlergiaParaguayMedicamento
 
 
 

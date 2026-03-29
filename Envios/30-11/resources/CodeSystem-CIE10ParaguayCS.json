@@ -1,0 +1,374 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "fragment",
+  "name": "CIE10ParaguayCS",
+  "id": "CIE10ParaguayCS",
+  "title": "CIE-10 Paraguay",
+  "description": "Códigos de la Clasificación Internacional de Enfermedades (CIE-10) con descripciones en español para Paraguay",
+  "url": "https://mspbs.gov.py/fhir/CodeSystem/CIE10ParaguayCS",
+  "concept": [
+    {
+      "code": "A00",
+      "display": "Cólera"
+    },
+    {
+      "code": "A00.0",
+      "display": "Cólera debido a Vibrio cholerae 01, biotipo cholerae"
+    },
+    {
+      "code": "A00.1",
+      "display": "Cólera debido a Vibrio cholerae 01, biotipo El Tor"
+    },
+    {
+      "code": "A00.9",
+      "display": "Cólera, no especificado"
+    },
+    {
+      "code": "A01",
+      "display": "Fiebres tifoidea y paratifoidea"
+    },
+    {
+      "code": "A01.0",
+      "display": "Fiebre tifoidea"
+    },
+    {
+      "code": "A01.1",
+      "display": "Fiebre paratifoidea A"
+    },
+    {
+      "code": "A01.2",
+      "display": "Fiebre paratifoidea B"
+    },
+    {
+      "code": "A01.3",
+      "display": "Fiebre paratifoidea C"
+    },
+    {
+      "code": "A01.4",
+      "display": "Fiebre paratifoidea, no especificada"
+    },
+    {
+      "code": "A02",
+      "display": "Otras infecciones debidas a Salmonella"
+    },
+    {
+      "code": "A02.0",
+      "display": "Enteritis debida a Salmonella"
+    },
+    {
+      "code": "A09",
+      "display": "Diarrea y gastroenteritis de presunto origen infeccioso"
+    },
+    {
+      "code": "E10",
+      "display": "Diabetes mellitus insulinodependiente"
+    },
+    {
+      "code": "E10.0",
+      "display": "Diabetes mellitus insulinodependiente, con coma"
+    },
+    {
+      "code": "E10.1",
+      "display": "Diabetes mellitus insulinodependiente, con cetoacidosis"
+    },
+    {
+      "code": "E10.2",
+      "display": "Diabetes mellitus insulinodependiente, con complicaciones renales"
+    },
+    {
+      "code": "E10.9",
+      "display": "Diabetes mellitus insulinodependiente, sin mención de complicación"
+    },
+    {
+      "code": "E11",
+      "display": "Diabetes mellitus no insulinodependiente"
+    },
+    {
+      "code": "E11.0",
+      "display": "Diabetes mellitus no insulinodependiente, con coma"
+    },
+    {
+      "code": "E11.1",
+      "display": "Diabetes mellitus no insulinodependiente, con cetoacidosis"
+    },
+    {
+      "code": "E11.2",
+      "display": "Diabetes mellitus no insulinodependiente, con complicaciones renales"
+    },
+    {
+      "code": "E11.3",
+      "display": "Diabetes mellitus no insulinodependiente, con complicaciones oftálmicas"
+    },
+    {
+      "code": "E11.4",
+      "display": "Diabetes mellitus no insulinodependiente, con complicaciones neurológicas"
+    },
+    {
+      "code": "E11.5",
+      "display": "Diabetes mellitus no insulinodependiente, con complicaciones circulatorias periféricas"
+    },
+    {
+      "code": "E11.6",
+      "display": "Diabetes mellitus no insulinodependiente, con otras complicaciones especificadas"
+    },
+    {
+      "code": "E11.9",
+      "display": "Diabetes mellitus no insulinodependiente, sin mención de complicación"
+    },
+    {
+      "code": "E14",
+      "display": "Diabetes mellitus, no especificada"
+    },
+    {
+      "code": "E14.9",
+      "display": "Diabetes mellitus, no especificada, sin mención de complicación"
+    },
+    {
+      "code": "E66",
+      "display": "Obesidad"
+    },
+    {
+      "code": "E66.0",
+      "display": "Obesidad debida a exceso de calorías"
+    },
+    {
+      "code": "E66.1",
+      "display": "Obesidad inducida por drogas"
+    },
+    {
+      "code": "E66.2",
+      "display": "Obesidad extrema con hipoventilación alveolar"
+    },
+    {
+      "code": "E66.8",
+      "display": "Otras obesidades"
+    },
+    {
+      "code": "E66.9",
+      "display": "Obesidad, no especificada"
+    },
+    {
+      "code": "I10",
+      "display": "Hipertensión esencial (primaria)"
+    },
+    {
+      "code": "I11",
+      "display": "Enfermedad cardíaca hipertensiva"
+    },
+    {
+      "code": "I11.0",
+      "display": "Enfermedad cardíaca hipertensiva con insuficiencia cardíaca (congestiva)"
+    },
+    {
+      "code": "I11.9",
+      "display": "Enfermedad cardíaca hipertensiva sin insuficiencia cardíaca (congestiva)"
+    },
+    {
+      "code": "I12",
+      "display": "Enfermedad renal hipertensiva"
+    },
+    {
+      "code": "I13",
+      "display": "Enfermedad cardíaca y renal hipertensiva"
+    },
+    {
+      "code": "I20",
+      "display": "Angina de pecho"
+    },
+    {
+      "code": "I21",
+      "display": "Infarto agudo del miocardio"
+    },
+    {
+      "code": "I21.0",
+      "display": "Infarto transmural agudo del miocardio de la pared anterior"
+    },
+    {
+      "code": "I21.1",
+      "display": "Infarto transmural agudo del miocardio de la pared inferior"
+    },
+    {
+      "code": "I21.2",
+      "display": "Infarto transmural agudo del miocardio de otros sitios"
+    },
+    {
+      "code": "I21.3",
+      "display": "Infarto transmural agudo del miocardio, de sitio no especificado"
+    },
+    {
+      "code": "I21.4",
+      "display": "Infarto subendocárdico agudo del miocardio"
+    },
+    {
+      "code": "I21.9",
+      "display": "Infarto agudo del miocardio, sin otra especificación"
+    },
+    {
+      "code": "I50",
+      "display": "Insuficiencia cardíaca"
+    },
+    {
+      "code": "I50.0",
+      "display": "Insuficiencia cardíaca congestiva"
+    },
+    {
+      "code": "I50.1",
+      "display": "Insuficiencia ventricular izquierda"
+    },
+    {
+      "code": "I50.9",
+      "display": "Insuficiencia cardíaca, no especificada"
+    },
+    {
+      "code": "J00",
+      "display": "Rinofaringitis aguda [resfriado común]"
+    },
+    {
+      "code": "J01",
+      "display": "Sinusitis aguda"
+    },
+    {
+      "code": "J02",
+      "display": "Faringitis aguda"
+    },
+    {
+      "code": "J03",
+      "display": "Amigdalitis aguda"
+    },
+    {
+      "code": "J06",
+      "display": "Infecciones agudas de las vías respiratorias superiores, de sitios múltiples o no especificados"
+    },
+    {
+      "code": "J06.9",
+      "display": "Infección aguda de las vías respiratorias superiores, no especificada"
+    },
+    {
+      "code": "J11",
+      "display": "Influenza [gripe] debida a virus no identificado"
+    },
+    {
+      "code": "J11.0",
+      "display": "Influenza debida a virus no identificado, con neumonía"
+    },
+    {
+      "code": "J11.1",
+      "display": "Influenza debida a virus no identificado, con otras manifestaciones respiratorias"
+    },
+    {
+      "code": "J18",
+      "display": "Neumonía, organismo no especificado"
+    },
+    {
+      "code": "J18.0",
+      "display": "Bronconeumonía, no especificada"
+    },
+    {
+      "code": "J18.1",
+      "display": "Neumonía lobar, no especificada"
+    },
+    {
+      "code": "J18.9",
+      "display": "Neumonía, no especificada"
+    },
+    {
+      "code": "J20",
+      "display": "Bronquitis aguda"
+    },
+    {
+      "code": "J40",
+      "display": "Bronquitis, no especificada como aguda o crónica"
+    },
+    {
+      "code": "J44",
+      "display": "Otras enfermedades pulmonares obstructivas crónicas"
+    },
+    {
+      "code": "J45",
+      "display": "Asma"
+    },
+    {
+      "code": "J45.0",
+      "display": "Asma predominantemente alérgica"
+    },
+    {
+      "code": "J45.1",
+      "display": "Asma no alérgica"
+    },
+    {
+      "code": "J45.8",
+      "display": "Asma mixta"
+    },
+    {
+      "code": "J45.9",
+      "display": "Asma, no especificada"
+    },
+    {
+      "code": "K29",
+      "display": "Gastritis y duodenitis"
+    },
+    {
+      "code": "K29.0",
+      "display": "Gastritis aguda hemorrágica"
+    },
+    {
+      "code": "K29.1",
+      "display": "Otras gastritis agudas"
+    },
+    {
+      "code": "K29.2",
+      "display": "Gastritis alcohólica"
+    },
+    {
+      "code": "K29.3",
+      "display": "Gastritis crónica superficial"
+    },
+    {
+      "code": "K29.4",
+      "display": "Gastritis crónica atrófica"
+    },
+    {
+      "code": "K29.5",
+      "display": "Gastritis crónica, no especificada"
+    },
+    {
+      "code": "K29.9",
+      "display": "Gastroduodenitis, no especificada"
+    },
+    {
+      "code": "O00",
+      "display": "Embarazo ectópico"
+    },
+    {
+      "code": "O10",
+      "display": "Hipertensión preexistente que complica el embarazo, el parto y el puerperio"
+    },
+    {
+      "code": "O11",
+      "display": "Trastornos hipertensivos preexistentes, con proteinuria agregada"
+    },
+    {
+      "code": "O80",
+      "display": "Parto único espontáneo"
+    },
+    {
+      "code": "O81",
+      "display": "Parto único con fórceps o ventosa extractora"
+    },
+    {
+      "code": "O82",
+      "display": "Parto único por cesárea"
+    },
+    {
+      "code": "U07.1",
+      "display": "COVID-19, virus identificado"
+    },
+    {
+      "code": "U07.2",
+      "display": "COVID-19, virus no identificado"
+    }
+  ],
+  "experimental": false,
+  "caseSensitive": true
+}

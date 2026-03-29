@@ -113,8 +113,8 @@ Description: "Ejemplo de Bundle"
 
 
 //Alergia-Intolerancia
-* entry[+].fullUrl = "AllergyIntolerance/AlergiaPeruMedicamento"
-* entry[=].resource = AlergiaPeruMedicamento
+* entry[+].fullUrl = "AllergyIntolerance/AlergiaParaguayMedicamento"
+* entry[=].resource = AlergiaParaguayMedicamento
 
 
 
@@ -128,9 +128,9 @@ Description: "Ejemplo de Bundle"
 * entry[=].resource = PacienteEjemploPy
 
 //Organization
-//* entry[+].fullUrl = "OrganizacionPe/OrganizacionEstablecimientoEjemplo"
-//* entry[=].resource = OrganizacionEstablecimientoEjemplo
+* entry[+].fullUrl = "Organization/OrganizacionEjemploPy"
+* entry[=].resource = OrganizacionEjemploPy
 
-//Profesional -- 
+//Profesional
 * entry[+].fullUrl = "Practitioner/PractitionerEjemploPy"
 * entry[=].resource = PractitionerEjemploPy

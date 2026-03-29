@@ -16,21 +16,21 @@
 <ul class="nav nav-tabs">
 {% if include.active == 'content' %}
   <li class="active">
-    <a href="#">Content</a>
+    <a href="#">Contenido</a>
   </li>
 {% else %}
   <li>
-    <a href="{{include.type}}-{{include.id}}.html">Content</a>
+    <a href="{{include.type}}-{{include.id}}.html">Contenido</a>
   </li>
 {% endif %}
 
 {% if include.active == 'definition' %}
   <li class="active">
-    <a href="#">Detailed Descriptions</a>
+    <a href="#">Descripciones Detalladas</a>
   </li>
 {% else %}
   <li>
-    <a href="{{include.type}}-{{include.id}}-definitions.html">Detailed Descriptions</a>
+    <a href="{{include.type}}-{{include.id}}-definitions.html">Descripciones Detalladas</a>
   </li>
 {% endif %}
 
@@ -55,7 +55,7 @@
       </li>
     {% else %}
       <li>
-        <a href="{{include.type}}-{{include.id}}-examples.html">Examples</a>
+        <a href="{{include.type}}-{{include.id}}-examples.html">Ejemplos</a>
       </li>
     {% endif %}
   {% endunless %}

@@ -1,0 +1,54 @@
+{
+  "resourceType": "Composition",
+  "id": "CompositionEjemploPy",
+  "meta": {
+    "profile": [
+      "https://mspbs.gov.py/fhir/StructureDefinition/CompositionPy"
+    ]
+  },
+  "type": {
+    "coding": [
+      {
+        "code": "11450-4",
+        "system": "http://loinc.org"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/PacienteEjemploPy"
+  },
+  "author": [
+    {
+      "reference": "Practitioner/PractitionerEjemploPy"
+    }
+  ],
+  "custodian": {
+    "reference": "Organization/OrganizacionEjemploPy"
+  },
+  "date": "2025-09-01",
+  "title": "Ejemplo de Documento Clinico Paraguay",
+  "status": "final",
+  "section": [
+    {
+      "title": "Diagnósticos",
+      "code": {
+        "coding": [
+          {
+            "code": "11450-4",
+            "system": "http://loinc.org",
+            "display": "Problem list Reported"
+          }
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Diagnósticos</div>"
+      },
+      "entry": [
+        {
+          "reference": "Condition/ConditionEjemploParaguay"
+        }
+      ]
+    }
+  ]
+}

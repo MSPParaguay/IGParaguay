@@ -1,0 +1,25 @@
+{
+  "resourceType": "MedicationStatement",
+  "id": "MedicationStatementEjemploParaguay",
+  "meta": {
+    "profile": [
+      "https://mspbs.gov.py/fhir/StructureDefinition/MedicationStatementPy"
+    ]
+  },
+  "subject": {
+    "reference": "Patient/PacienteEjemploParaguay"
+  },
+  "status": "active",
+  "medicationCodeableConcept": {
+    "text": "Paracetamol"
+  },
+  "dosage": [
+    {
+      "text": "1 tableta de 500 mg cada 8 horas",
+      "route": {
+        "text": "Oral"
+      }
+    }
+  ],
+  "effectiveDateTime": "2023-01-02"
+}

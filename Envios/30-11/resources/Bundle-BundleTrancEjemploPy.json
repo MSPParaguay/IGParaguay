@@ -1,0 +1,382 @@
+{
+  "resourceType": "Bundle",
+  "id": "BundleTrancEjemploPy",
+  "meta": {
+    "profile": [
+      "https://mspbs.gov.py/fhir/StructureDefinition/BundleTransaccPy"
+    ]
+  },
+  "type": "transaction",
+  "timestamp": "2022-03-03T10:30:00Z",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:1c3f3b6e-3f4e-4c5a-9e2b-1e8f0c8b9c6d",
+      "resource": {
+        "resourceType": "List",
+        "id": "ListEjemploPy2",
+        "meta": {
+          "profile": [
+            "https://mspbs.gov.py/fhir/StructureDefinition/ListPy"
+          ]
+        },
+        "status": "current",
+        "mode": "working",
+        "date": "2025-09-01T10:30:00Z",
+        "entry": [
+          {
+            "item": {
+              "reference": "urn:uuid:487b6713-4647-4a9a-914e-7c552d7197e9"
+            }
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:05d3374b-0278-4d04-93f7-6adc181d5874"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "List"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:487b6713-4647-4a9a-914e-7c552d7197e9",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "DocumentReferenceEjemploPy2",
+        "meta": {
+          "profile": [
+            "https://mspbs.gov.py/fhir/StructureDefinition/DocumentReferencePy"
+          ]
+        },
+        "status": "current",
+        "date": "2025-09-01T10:30:00Z",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "34105-7",
+              "display": "Nota de consulta"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:05d3374b-0278-4d04-93f7-6adc181d5874"
+        },
+        "custodian": {
+          "reference": "Organization/OrganizacionEjemploPy"
+        },
+        "author": [
+          {
+            "reference": "PractitionerPy/PractitionerEjemploPy"
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/fhir+json",
+              "url": "urn:uuid:d384326c-7c0f-4ac2-ba90-a1d83e5b548f"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DocumentReference"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d384326c-7c0f-4ac2-ba90-a1d83e5b548f",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "BundleDocumentEjemploParaguay2",
+        "meta": {
+          "profile": [
+            "https://mspbs.gov.py/fhir/StructureDefinition/BundleDocPy",
+            "https://mspbs.gov.py/fhir/StructureDefinition/BundlePy"
+          ]
+        },
+        "type": "document",
+        "timestamp": "2023-05-01T10:30:00Z",
+        "identifier": {
+          "system": "urn:oid",
+          "value": "28b95815-76ce-457b-b7ae-a972e527db40"
+        },
+        "entry": [
+          {
+            "fullUrl": "Composition/CompositionEjemploPy",
+            "resource": {
+              "resourceType": "Composition",
+              "id": "CompositionEjemploPy",
+              "meta": {
+                "profile": [
+                  "https://mspbs.gov.py/fhir/StructureDefinition/CompositionPy"
+                ]
+              },
+              "type": {
+                "coding": [
+                  {
+                    "code": "11450-4",
+                    "system": "http://loinc.org"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/PacienteEjemploPy"
+              },
+              "author": [
+                {
+                  "reference": "Practitioner/PractitionerEjemploPy"
+                }
+              ],
+              "custodian": {
+                "reference": "Organization/OrganizacionEjemploPy"
+              },
+              "date": "2025-09-01",
+              "title": "Ejemplo de Documento Clinico Paraguay",
+              "status": "final",
+              "section": [
+                {
+                  "title": "Diagnósticos",
+                  "code": {
+                    "coding": [
+                      {
+                        "code": "11450-4",
+                        "system": "http://loinc.org",
+                        "display": "Problem list Reported"
+                      }
+                    ]
+                  },
+                  "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Diagnósticos</div>"
+                  },
+                  "entry": [
+                    {
+                      "reference": "Condition/ConditionEjemploParaguay"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "Condition/ConditionEjemploParaguay",
+            "resource": {
+              "resourceType": "Condition",
+              "id": "ConditionEjemploParaguay",
+              "meta": {
+                "profile": [
+                  "https://mspbs.gov.py/fhir/StructureDefinition/ConditionPy"
+                ]
+              },
+              "subject": {
+                "reference": "Patient/PacienteEjemploPy"
+              },
+              "verificationStatus": {
+                "coding": [
+                  {
+                    "code": "confirmed",
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+                  }
+                ]
+              },
+              "onsetPeriod": {
+                "start": "2023-01-13"
+              },
+              "note": [
+                {
+                  "text": "Antecedentes de diabetes de tipo 1"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "AllergyIntolerance/AlergiaPeruMedicamento",
+            "resource": {
+              "resourceType": "AllergyIntolerance",
+              "id": "AlergiaPeruMedicamento",
+              "meta": {
+                "profile": [
+                  "https://mspbs.gov.py/fhir/StructureDefinition/AlergiaPy"
+                ]
+              },
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/sid/icd-10",
+                    "code": "T36.0X5",
+                    "display": "alergia a penicilina"
+                  }
+                ],
+                "text": "alergia a penicilina"
+              },
+              "clinicalStatus": {
+                "coding": [
+                  {
+                    "code": "active"
+                  }
+                ]
+              },
+              "verificationStatus": {
+                "coding": [
+                  {
+                    "code": "confirmed"
+                  }
+                ]
+              },
+              "patient": {
+                "reference": "Patient/PacienteEjemploParaguay",
+                "display": "Paciente Ejemplo"
+              },
+              "category": [
+                "medication"
+              ]
+            }
+          },
+          {
+            "fullUrl": "MedicationStatement/MedicationStatementEjemploParaguay",
+            "resource": {
+              "resourceType": "MedicationStatement",
+              "id": "MedicationStatementEjemploParaguay",
+              "meta": {
+                "profile": [
+                  "https://mspbs.gov.py/fhir/StructureDefinition/MedicationStatementPy"
+                ]
+              },
+              "subject": {
+                "reference": "Patient/PacienteEjemploParaguay"
+              },
+              "status": "active",
+              "medicationCodeableConcept": {
+                "text": "Paracetamol"
+              },
+              "dosage": [
+                {
+                  "text": "1 tableta de 500 mg cada 8 horas",
+                  "route": {
+                    "text": "Oral"
+                  }
+                }
+              ],
+              "effectiveDateTime": "2023-01-02"
+            }
+          },
+          {
+            "fullUrl": "Patient/PacienteEjemploPy",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "PacienteEjemploPy",
+              "meta": {
+                "profile": [
+                  "https://mspbs.gov.py/fhir/StructureDefinition/PacientePy"
+                ]
+              },
+              "identifier": [
+                {
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "https://mspbs.gov.py/fhir/CodeSystem/IdentificadoresPersonaCS",
+                        "code": "01",
+                        "display": "Cédula de Identidad"
+                      }
+                    ]
+                  },
+                  "value": "98765"
+                }
+              ],
+              "name": [
+                {
+                  "given": [
+                    "Luis"
+                  ],
+                  "family": "Sanchez"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1974-12-25"
+            }
+          },
+          {
+            "fullUrl": "Practitioner/PractitionerEjemploPy",
+            "resource": {
+              "resourceType": "Practitioner",
+              "id": "PractitionerEjemploPy",
+              "meta": {
+                "profile": [
+                  "https://mspbs.gov.py/fhir/StructureDefinition/PractitionerPy"
+                ]
+              },
+              "name": [
+                {
+                  "family": "Doe",
+                  "given": [
+                    "John"
+                  ]
+                }
+              ],
+              "identifier": [
+                {
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "https://mspbs.gov.py/fhir/CodeSystem/IdentificadoresProfesionalCS",
+                        "code": "01",
+                        "display": "Cédula de Identidad"
+                      }
+                    ]
+                  },
+                  "value": "5555555"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Bundle"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:05d3374b-0278-4d04-93f7-6adc181d5874",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "PacienteEjemploPy",
+        "meta": {
+          "profile": [
+            "https://mspbs.gov.py/fhir/StructureDefinition/PacientePy"
+          ]
+        },
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "https://mspbs.gov.py/fhir/CodeSystem/IdentificadoresPersonaCS",
+                  "code": "01",
+                  "display": "Cédula de Identidad"
+                }
+              ]
+            },
+            "value": "98765"
+          }
+        ],
+        "name": [
+          {
+            "given": [
+              "Luis"
+            ],
+            "family": "Sanchez"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1974-12-25"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Patient"
+      }
+    }
+  ]
+}
