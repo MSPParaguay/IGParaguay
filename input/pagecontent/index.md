@@ -17,21 +17,28 @@ La presente **Guía de Implementación (GI)** define la especificación técnic
 
 Los focos principales son:
 
-*   Datos demográficos del paciente.
-*   Resumen Digital en Atención de Salud (RDA).
-*   Vocabularios y terminologías estandarizadas (SNOMED CT, CIE-10/11, LOINC, ATC, entre otras).
-*   Operaciones y transacciones FHIR necesarias para el intercambio de información clínica.
+*   **Datos demográficos:** Información de pacientes, profesionales y organizaciones
+*   **Resumen Digital en Atención (RDA):** Documento mínimo de intercambio clínico basado en ISO 27269:2021 (International Patient Summary)
+*   **Información clínica:** Diagnósticos, medicamentos, alergias e inmunizaciones con terminologías estandarizadas
+*   **Terminología e interoperabilidad:** Uso de estándares internacionales (SNOMED CT, CIE-10, LOINC) adaptados para Paraguay
+*   **Operaciones y transacciones FHIR:** Intercambio de documentos conforme a IHE MHD (ITI-65, ITI-67, ITI-68)
 
-Asimismo, esta guía detalla las interacciones requeridas entre los prestadores y las plataformas nacionales de interoperabilidad, incluyendo:
+Esta guía detalla las interacciones requeridas entre prestadores de salud y plataformas nacionales de interoperabilidad para:
 
-*   Envío de documentos IPS.
-*   Consulta y visualización de datos clínicos relevantes.
+*   **Envío (ITI-65):** Registrar y enviar documentos clínicos (Provide and Register DocumentReference transaction)
+*   **Búsqueda (ITI-67):** Consultar índices de documentos por paciente (Find DocumentReferences transaction)
+*   **Recuperación (ITI-68):** Obtener documentos completos y sus recursos asociados (Retrieve Document Set transaction)
 
 ## **Cómo leer esta Guía**
 
-Esta Guía sigue un formato especificado para **FHIR R4**, y se divide en varias páginas que proporcionan información general del **Core paraguayo** y la explicación técnica de los **artefactos generados**.
+Esta Guía sigue un formato especificado para **FHIR R4**, con énfasis en la adopción del **Resumen Digital en Atención (RDA)** como documento mínimo de intercambio clínico. Se divide en varias secciones navegables que proporcionan:
 
-El **menú de navegación** se encuentra en la parte superior de la guía.
+1. **Descripción conceptual:** Introducción, contexto y referencias normativas
+2. **Especificaciones técnicas:** Detalles de cada perfil FHIR definido
+3. **Implementación:** Operaciones, transacciones y ejemplos funcionales
+4. **Recursos:** Vocabularios, terminologías y materiales de referencia
+
+El **menú de navegación** en la parte superior organiza el contenido de manera jerárquica para facilitar la navegación según el rol del implementador.
 
 ### **Secciones principales**
 
@@ -39,8 +46,9 @@ El **menú de navegación** se encuentra en la parte superior de la guía.
 *   **Perfiles Base:** Describen los perfiles sobre los datos básicos codificados generados para Paraguay. Incluyen recursos fundamentales como Paciente, Organización, Profesional de Salud, Identificadores, Contactos, entre otros.
 *   **Perfiles de Información Clínica:** Incluyen los perfiles especializados para representar información de salud del paciente, como problemas de salud, alergias, medicamentos e inmunizaciones. Su objetivo es garantizar que los datos clínicos relevantes se compartan de manera estructurada, interoperable y con semántica estandarizada mediante terminologías internacionales.
 *   **Perfiles de Documentos:** definen la manera en que se agrupa y estructura la información clínica y administrativa en Paraguay, de acuerdo con los estándares FHIR R4 y RDA. Estos perfiles aseguran que los datos clínicos relevantes puedan ser compartidos como unidades completas e independientes de información, útiles para continuidad asistencial, referencia, contrarreferencia y salud pública.
-*   **Transacciones:** Definen las operaciones técnicas necesarias para el intercambio de los artefactos FHIR entre sistemas.
-*   **Resumen:** incluye un resumen de las guías en general.
+*   **Transacciones:** Definen las operaciones técnicas necesarias para el intercambio de los artefactos FHIR entre sistemas, conforme al estándar IHE MHD.
+*   **Terminología:** Describe los vocabularios y sistemas de codificación utilizados en la guía, incluyendo CIE-10 adaptada para Paraguay.
+*   **Resumen:** Proporciona información técnica adicional, especificaciones y recursos de descarga.
 
 ### **Destinatarios**
 

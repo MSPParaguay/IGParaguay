@@ -1,11 +1,9 @@
-CodeSystem: CIE10CSES
-//Id: icd-10-ES
-Title: "Code System - CIE 10 - Español"
-Description: "Codificación CIE Español"
-//* ^url = "http://hl7.org/fhir/sid/icd-10"
-//* ^status = #active
-//* ^version = "2025-11"
-//* ^date = "2025-11-07T04:04:47Z"
+CodeSystem: ICD10Core
+Id: CIE10-Español
+Title: "CIE10 - Español"
+Description: "Codificación CIE10 - español."
+* ^url = "http://hl7.org/fhir/sid/icd-10"
+* ^status = #active
 * ^content = #complete
 * ^property[0].code = #hierarchyLevel
 * ^property[=].type = #string
@@ -187737,4 +187735,3 @@ Description: "Codificación CIE Español"
 * #Z99.9 ^property[=].valueString = "Z00-Z99"
 * #Z99.9 ^property[+].code = #parentId
 * #Z99.9 ^property[=].valueString = "Z99"
-

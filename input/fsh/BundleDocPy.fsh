@@ -104,33 +104,82 @@ Description: "Ejemplo de Bundle"
 * identifier.value = "28b95815-76ce-457b-b7ae-a972e527db40"
 
 
-* entry[0].fullUrl = "Composition/CompositionEjemploPy"
-* entry[=].resource = CompositionEjemploPy
+* entry[Composition].fullUrl = "Composition/CompositionEjemploPy"
+* entry[Composition].resource = CompositionEjemploPy
 
 //Condition
-* entry[+].fullUrl = "Condition/ConditionEjemploParaguay"
-* entry[=].resource = ConditionEjemploParaguay
+* entry[Condition].fullUrl = "Condition/ConditionEjemploParaguay"
+* entry[Condition].resource = ConditionEjemploParaguay
 
 
 //Alergia-Intolerancia
-* entry[+].fullUrl = "AllergyIntolerance/AlergiaParaguayMedicamento"
-* entry[=].resource = AlergiaParaguayMedicamento
+* entry[Alergias].fullUrl = "AllergyIntolerance/AlergiaParaguayMedicamento"
+* entry[Alergias].resource = AlergiaParaguayMedicamento
 
 
 
 //MEdicamentos
-* entry[+].fullUrl = "MedicationStatement/MedicationStatementEjemploParaguay"
-* entry[=].resource = MedicationStatementEjemploParaguay
+* entry[Medicaciones].fullUrl = "MedicationStatement/MedicationStatementEjemploParaguay"
+* entry[Medicaciones].resource = MedicationStatementEjemploParaguay
 
 
 //Patient
-* entry[+].fullUrl = "Patient/PacienteEjemploPy"
-* entry[=].resource = PacienteEjemploPy
+* entry[Patient].fullUrl = "Patient/PacienteEjemploPy"
+* entry[Patient].resource = PacienteEjemploPy
 
 //Organization
-* entry[+].fullUrl = "Organization/OrganizacionEjemploPy"
-* entry[=].resource = OrganizacionEjemploPy
+* entry[Organizacion].fullUrl = "Organization/OrganizacionEjemploPy"
+* entry[Organizacion].resource = OrganizacionEjemploPy
 
 //Profesional
-* entry[+].fullUrl = "Practitioner/PractitionerEjemploPy"
-* entry[=].resource = PractitionerEjemploPy
+* entry[Profesional].fullUrl = "Practitioner/PractitionerEjemploPy"
+* entry[Profesional].resource = PractitionerEjemploPy
+
+
+
+Instance : BundleDocumentEjemploParaguay2
+InstanceOf : BundleDocPy
+Title : "Bundle IPS - Paraguay"
+Description: "Ejemplo de Bundle-Document 2."
+Usage : #example
+
+
+* meta.profile = $canonicaBundle
+* type = #document
+
+* timestamp = "2023-05-01T10:30:00Z"
+* identifier.system = "urn:oid"
+* identifier.value = "28b95815-76ce-457b-b7ae-a972e527db40"
+
+
+* entry[Composition].fullUrl = "Composition/CompositionEjemploPy"
+* entry[Composition].resource = CompositionEjemploPy
+
+//Condition
+* entry[Condition].fullUrl = "Condition/ConditionEjemploParaguay"
+* entry[Condition].resource = ConditionEjemploParaguay
+
+
+//Alergia-Intolerancia
+* entry[Alergias].fullUrl = "AllergyIntolerance/AlergiaParaguayMedicamento"
+* entry[Alergias].resource = AlergiaParaguayMedicamento
+
+
+
+//MEdicamentos
+* entry[Medicaciones].fullUrl = "MedicationStatement/MedicationStatementEjemploParaguay"
+* entry[Medicaciones].resource = MedicationStatementEjemploParaguay
+
+
+//Patient
+* entry[Patient].fullUrl = "Patient/PacienteEjemploPy"
+* entry[Patient].resource = PacienteEjemploPy
+
+//Organization
+* entry[Organizacion].fullUrl = "OrganizacionPe/OrganizacionEjemploPy"
+* entry[Organizacion].resource = OrganizacionEjemploPy
+
+
+//Profesional -- 
+* entry[Profesional].fullUrl = "Practitioner/PractitionerEjemploPy"
+* entry[Profesional].resource = PractitionerEjemploPy

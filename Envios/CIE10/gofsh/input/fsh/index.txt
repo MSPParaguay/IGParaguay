@@ -1,0 +1,2 @@
+Name       Type        File
+ICD10Core  CodeSystem  codesystems\ICD10Core.fsh
